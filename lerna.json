@@ -1,0 +1,17 @@
+{
+  "lerna": "2.0.0-beta.37",
+  "version": "independent",
+  "publishConfig": {
+    "ignore": [
+      "node_modules",
+      "build",
+      "examples",
+      "packages",
+      "src",
+      "log.*"
+    ]
+  },
+  "packages": [
+    "packages/*"
+  ]
+}
