@@ -1,0 +1,21 @@
+{
+  "presets": [["es2015", { "loose": true}]],
+  "plugins": ["transform-vue-jsx",["component", [
+    {
+      "libraryName": "sealui-m",
+      "styleLibraryName": "theme-default"
+    }
+  ]]],
+  "env": {
+    "utils": {
+      "plugins": [
+        ["module-resolver", {
+          "root": ["sealui-m"],
+          "alias": {
+            "sealui-m/src" : "sealui-m/lib"
+          }
+        }]
+      ]
+    }
+  }
+}
