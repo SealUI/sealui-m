@@ -19,4 +19,52 @@
 [![npm](https://img.shields.io/npm/dm/sealui-m.svg)]()
 
 [![donate](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000)](https://github.com/SealUI/donate)
+
+## 目标功能
+
+#### 组件
+##### 基础组件
+- [x] Button   按钮组件
+- [x] Icon     字体图标组件
+- [x] Spinner  旋转图标
+- [x] Sticky   吸顶组件
+- [x] Cell     列表组件
+- [x] Grid     宫格
+- [x] Panel    面板组件
+- [x] Flex     弹性布局
+- [x] Tag      标签组件
+- [x] Divider  分割线
+- [x] Steps    步骤条
+- [x] Timeline 时间轴
+- [x] Tab      Tab切换
+- [x] Radio    单选框
+- [x] Checkbox 复选框
+- [x] TabBar   TabBar导航
+- [x] Video    视频
+- [ ] Article
+- [ ] Countdown
+- [ ] Countup
+- [ ] Swiper
+
+##### 操作提示
+- [x] Toast       轻提示
+- [x] Loading     加载器
+- [x] MessageBox  轻弹层(Alert、Confirm)
+- [x] ActionSheet 动作面板
+- [x] Msg         提示页
+- [x] Toptips     顶部提示
+- [x] Notice      公告
+
+##### 表单组件
+- [ ] Input
+- [ ] Number
+- [ ] Switch
+- [ ] Textarea
+
+#### 插件
+- [x] TitlePlugin 设置微信标题
+- [x] AjaxPlugin Ajax的封装
+
+#### 指令
+- [x] TitleDirectives 设置微信标题
 <script type="text/javascript" src="manifest.b660fe8.js"></script><script type="text/javascript" src="sealui.1c7f677.js"></script><script type="text/javascript" src="example.e310476.js"></script>
