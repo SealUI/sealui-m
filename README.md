@@ -1,4 +1,4 @@
-<head><link href="sealui.c965aaa.css" rel="stylesheet"><link href="example.9458188.css" rel="stylesheet"></head><p align="center">
+<head><link href="sealui.c965aaa.css" rel="stylesheet"><link href="example.bb6e0a5.css" rel="stylesheet"></head><p align="center">
   <img src="https://ui.nmtree.com/20392063.jpeg" width="200" style="border-radius:10px;">
 </p>
 
@@ -56,7 +56,7 @@
 - [x] Notice      公告
 
 ##### 表单组件
-- [ ] Input
+- [x] Input       输入框
 - [ ] Number
 - [ ] Switch
 - [ ] Textarea
@@ -67,4 +67,4 @@
 
 #### 指令
 - [x] TitleDirectives 设置微信标题
-<script type="text/javascript" src="manifest.b660fe8.js"></script><script type="text/javascript" src="sealui.1c7f677.js"></script><script type="text/javascript" src="example.e310476.js"></script>
+<script type="text/javascript" src="manifest.a3d3093.js"></script><script type="text/javascript" src="sealui.1d46eba.js"></script><script type="text/javascript" src="example.d888489.js"></script>
