@@ -1,4 +1,4 @@
-<head><link href="example.646e696.css" rel="stylesheet"></head><p align="center">
+<head><link href="example.d9059b3.css" rel="stylesheet"></head><p align="center">
   <img src="https://ui.nmtree.com/20392063.jpeg" width="200" style="border-radius:10px;">
 </p>
 
@@ -73,4 +73,4 @@
 
 #### 指令
 - [x] TitleDirectives 设置微信标题
-<script type="text/javascript" src="manifest.7d09eb9.js"></script><script type="text/javascript" src="sealui.7d01310.js"></script><script type="text/javascript" src="example.26dda75.js"></script>
+<script type="text/javascript" src="manifest.650391e.js"></script><script type="text/javascript" src="sealui.23a4495.js"></script><script type="text/javascript" src="example.8e60a6c.js"></script>
