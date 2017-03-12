@@ -1,4 +1,4 @@
-<head><link href="sealui.c965aaa.css" rel="stylesheet"><link href="example.bb6e0a5.css" rel="stylesheet"></head><p align="center">
+<head><link href="example.646e696.css" rel="stylesheet"></head><p align="center">
   <img src="https://ui.nmtree.com/20392063.jpeg" width="200" style="border-radius:10px;">
 </p>
 
@@ -65,6 +65,12 @@
 - [x] TitlePlugin 设置微信标题
 - [x] AjaxPlugin Ajax的封装
 
+#### 工具库
+- [x] Base64  base64加密、解密
+- [x] date  格式化日期
+- [x] MD5  md5加密
+- [x] String  String函数 (trim)
+
 #### 指令
 - [x] TitleDirectives 设置微信标题
-<script type="text/javascript" src="manifest.a3d3093.js"></script><script type="text/javascript" src="sealui.1d46eba.js"></script><script type="text/javascript" src="example.d888489.js"></script>
+<script type="text/javascript" src="manifest.7d09eb9.js"></script><script type="text/javascript" src="sealui.7d01310.js"></script><script type="text/javascript" src="example.26dda75.js"></script>
