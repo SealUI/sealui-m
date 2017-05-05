@@ -1,4 +1,4 @@
-<head><link href="example.a518410.css" rel="stylesheet"></head><p align="center">
+<head><link href="example.5549c84.css" rel="stylesheet"></head><p align="center">
   <img src="http://ui.nmtree.com/sealui.jpg" width="200" style="border-radius:10px;">
 </p>
 
@@ -73,4 +73,4 @@
 
 #### 指令
 - [x] TitleDirectives 设置微信标题
-<script type="text/javascript" src="manifest.c9a21cb.js"></script><script type="text/javascript" src="sealui.0c6ea55.js"></script><script type="text/javascript" src="example.dc7d3e5.js"></script>
+<script type="text/javascript" src="manifest.45148ca.js"></script><script type="text/javascript" src="sealui.cfa954f.js"></script><script type="text/javascript" src="example.6e14137.js"></script>
