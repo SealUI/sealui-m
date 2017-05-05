@@ -73,4 +73,4 @@
 
 #### 指令
 - [x] TitleDirectives 设置微信标题
-<script type="text/javascript" src="manifest.0dd7d49.js"></script><script type="text/javascript" src="sealui.0c6ea55.js"></script><script type="text/javascript" src="example.dc7d3e5.js"></script>
+<script type="text/javascript" src="manifest.c9a21cb.js"></script><script type="text/javascript" src="sealui.0c6ea55.js"></script><script type="text/javascript" src="example.dc7d3e5.js"></script>
