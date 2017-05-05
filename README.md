@@ -1,5 +1,5 @@
 <head><link href="example.a518410.css" rel="stylesheet"></head><p align="center">
-  <img src="https://ui.nmtree.com/20392063.jpeg" width="200" style="border-radius:10px;">
+  <img src="http://ui.nmtree.com/sealui.jpg" width="200" style="border-radius:10px;">
 </p>
 
 # SealUI-M
@@ -73,4 +73,4 @@
 
 #### 指令
 - [x] TitleDirectives 设置微信标题
-<script type="text/javascript" src="manifest.71895ad.js"></script><script type="text/javascript" src="sealui.0c6ea55.js"></script><script type="text/javascript" src="example.dc7d3e5.js"></script>
+<script type="text/javascript" src="manifest.0dd7d49.js"></script><script type="text/javascript" src="sealui.0c6ea55.js"></script><script type="text/javascript" src="example.dc7d3e5.js"></script>
