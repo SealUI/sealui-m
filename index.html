@@ -2,83 +2,17 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <script type="text/javascript">
-  // (function (win) {
-  //   var remCalc = {};
-  //   var docEl = win.document.documentElement,
-  //     tid,
-  //     hasRem = true,
-  //     hasZoom = true,
-  //     designWidth = 750;
-
-  //   function refresh() {
-  //     var width = docEl.getBoundingClientRect().width;
-  //     // if (width > 640) { width = 640 }
-  //     if (hasRem) {
-  //       var rem = width / 10;
-  //       docEl.style.fontSize = rem + "px";
-  //       remCalc.rem = rem;
-  //       var actualSize = parseFloat(window.getComputedStyle(document.documentElement)["font-size"]);
-  //       if (actualSize !== rem && actualSize > 0 && Math.abs(actualSize - rem) > 1) {
-  //         var remScaled = rem * rem / actualSize;
-  //         docEl.style.fontSize = remScaled + "px"
-  //       }
-  //     }
-  //     if (hasZoom) {
-  //       var style = document.getElementById('J__style')
-  //       if (!style) {
-  //         style = document.createElement('style')
-  //         style.id = 'J__style'
-  //       }
-  //       style.innerHTML = '.__z{zoom:' + width / designWidth + '}'
-  //       document.getElementsByTagName('head')[0].appendChild(style)
-  //     }
-  //   }
-
-  //   function dbcRefresh() {
-  //     clearTimeout(tid);
-  //     tid = setTimeout(refresh, 100)
-  //   }
-  //   win.addEventListener("resize", function () {
-  //     dbcRefresh()
-  //   }, false);
-
-  //   win.addEventListener("pageshow", function (e) {
-  //     if (e.persisted) {
-  //       dbcRefresh()
-  //     }
-  //   }, false);
-  //   refresh();
-  //   if (hasRem) {
-  //     remCalc.refresh = refresh;
-  //     remCalc.rem2px = function (d) {
-  //       var val = parseFloat(d) * this.rem;
-  //       if (typeof d === "string" && d.match(/rem$/)) {
-  //         val += "px"
-  //       }
-  //       return val
-  //     };
-  //     remCalc.px2rem = function (d) {
-  //       var val = parseFloat(d) / this.rem;
-  //       if (typeof d === "string" && d.match(/px$/)) {
-  //         val += "rem"
-  //       }
-  //       return val
-  //     };
-  //     win.remCalc = remCalc
-  //   }
-  // })(window);
-
-</script>
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="shortcut icon" href="/favicon.ico">
     <title>SealUI-M</title>
-  <link href="example.bc516b9.css" rel="stylesheet"></head>
+    <script>!function(e,t){"use strict";!function(){var i=t.querySelector('meta[name="viewport"]'),n=t.querySelector('meta[name="hotcss"]'),r=e.devicePixelRatio||1;if(n){var a=n.getAttribute("content");if(a){var s=a.match(/initial\-dpr=([\d\.]+)/);s&&(r=parseFloat(s[1]))}}t.documentElement.setAttribute("data-dpr",r);var o=1/r,m="width=device-width, initial-scale="+o+", minimum-scale="+o+", maximum-scale="+o+", user-scalable=no";i?i.setAttribute("content",m):(i=t.createElement("meta"),i.setAttribute("name","viewport"),i.setAttribute("content",m),t.head.appendChild(i))}();var i={};i.px2rem=function(e,t){return t||(t=parseInt(i.designWidth,10)),750*parseInt(e,10)/t/100},i.rem2px=function(e,t){return t||(t=parseInt(i.designWidth,10)),100*e*t/750},i.mresize=function(){var i=e.innerWidth;return i?void(t.documentElement.style.fontSize=100*i/750+"px"):!1},i.mresize(),e.addEventListener("resize",function(){clearTimeout(i.tid),i.tid=setTimeout(i.mresize,33)},!1),e.addEventListener("load",i.mresize,!1),setTimeout(function(){i.mresize()},333),e.hotcss=i}(window,document);</script>
+  <link href="example.a518410.css" rel="stylesheet"></head>
   <body ontouchstart>
     <div id="app"></div>
-        <script src="//cdn.bootcss.com/vue/2.2.1/vue.min.js"></script>
-        <script src="//cdn.bootcss.com/vue-router/2.0.3/vue-router.js"></script>
-        <script src="//cdn.bootcss.com/fastclick/1.0.6/fastclick.js"></script>
+        <script src="//unpkg.com/vue@2.3.2/dist/vue.min.js"></script>
+        <script src="//unpkg.com/vue-router@2.5.3/dist/vue-router.min.js"></script>
+        <script src="//unpkg.com/fastclick@1.0.6/lib/fastclick.js"></script>
+        <script src="//unpkg.com/axios@0.16.1/dist/axios.min.js"></script>
 
-  <script type="text/javascript" src="manifest.36774d7.js"></script><script type="text/javascript" src="sealui.23a4495.js"></script><script type="text/javascript" src="example.202793e.js"></script></body>
+  <script type="text/javascript" src="manifest.047d67c.js"></script><script type="text/javascript" src="sealui.0c6ea55.js"></script><script type="text/javascript" src="example.5127bfe.js"></script></body>
 </html>
