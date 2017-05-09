@@ -1,0 +1,71 @@
+@charset "UTF-8";
+@import "./common/var.css";
+@import './mixins/text';
+
+@component-namespace sealui {
+    @b timeline-item {
+        position:relative;
+        list-style-type: none;
+
+        @e content{
+            padding:0 0 .3rem .4rem;
+            & h4{
+                color:#666;
+                font-size: .24rem;
+                &.process{
+                    font-size: .28rem;
+                }
+            }
+            & p{
+                color:#888;
+                font-size: .18rem;
+                &.process{
+                    font-size: .22rem;
+                }
+            }
+        }
+        &__head,
+        &__head-first{
+            position:absolute;
+            content:'';
+            z-index:99;
+            border-radius:.99rem;
+        }
+        @e head {
+            width:.2rem;
+            height:.2rem;
+            left:.02rem;
+            top:.08rem
+        }
+        @e head-first {
+            width:.4rem;
+            height:.4rem;
+            left:-.08rem;
+            top:.04rem;
+        }
+        @e tail {
+            position:absolute;
+            content:'';
+            height:100%;
+            width:.04rem;
+            left:.1rem;
+            top:.1rem;
+            background-color:var(--color-primary)
+        }
+        @e checked {
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            text-align: center;
+            &.sealui-icon::before {
+              font-size:.32rem;
+              color: #FFF;
+            }
+        }
+        @e color{
+            background-color:var(--color-primary)
+        }
+    }
+}

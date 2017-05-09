@@ -1,0 +1,91 @@
+@charset "UTF-8";
+@import "./common/var.css";
+@import './mixins/setOnepx';
+@import './mixins/text';
+
+@component-namespace sealui {
+    @b wepay-input {
+
+    }
+    @b wepay-pay{
+        position: relative;
+        z-index: 1;
+        padding: .3rem;
+        &-wrap{
+          background-color: #fbf9fe;
+        }
+
+        @e inner{
+            background-color: var(--wepay-inner-background-color);
+            padding: var(--wepay-inner-padding);
+            position: relative;
+            z-index: 0;
+
+            &::after{
+                content: " ";
+                width: 200%;
+                height: 200%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                border: 1px solid var(--base-border-line-color);
+                transform: scale(0.5);
+                transform-origin: 0 0;
+                box-sizing: border-box;
+            }
+        }
+        @e title{
+            font-size: var(--wepay-title-font-size);
+            color: var(--wepay-title-font-color);
+            font-weight: normal;
+        }
+        @e inputs{
+            margin-top: .24rem;
+            padding-bottom: .36rem;
+            position: relative;
+            z-index: 2;
+            color: var(--wepay-input-font-color);
+
+            &::after{
+                @mixin setBottomLine var(--base-border-line-color)
+            }
+        }
+        @e strong{
+            position: absolute;
+            color: var(--wepay-strong-font-color);
+            font-size: .56rem;
+            line-height: 1;
+            left: -.12rem;
+            top: -.06rem;
+            font-weight: normal;
+        }
+        @e input{
+            padding-left: .56rem;
+            width: 100%;
+            box-sizing: border-box;
+            border: none;
+            outline: 0;
+            height: .8rem;
+            line-height: .8rem;
+            font-size: .8rem;
+        }
+        @e intro {
+            font-size: .24rem;
+            color: var(--wepay-intro-font-color);
+            margin-top: .24rem;
+        }
+        @e info{
+            font-size: .24rem;
+            color: var(--wepay-intro-font-color);
+            margin-top: .32rem;
+            text-align: center;
+        }
+        @e btn{
+            margin-top: .24rem;
+        }
+        @e msg{
+            position: relative;
+            z-index: 1;
+        }
+    }
+}

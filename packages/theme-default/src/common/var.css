@@ -1,0 +1,230 @@
+:root{
+	/* Transition
+  -------------------------- */
+  --all-transition: all .3s cubic-bezier(.645,.045,.355,1);
+  --fade-transition: opacity 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  --fade-linear-transition: opacity 200ms linear;
+  --md-fade-transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms, opacity 300ms cubic-bezier(0.23, 1, 0.32, 1) 100ms;
+  --border-transition-base: border-color .2s cubic-bezier(.645,.045,.355,1);
+  --color-transition-base: color .2s cubic-bezier(.645,.045,.355,1);
+
+  --base-font-family :"Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
+  --base-background-color-active : rgba(0,0,0,.02);
+  --base-border-line-color:#d9d9d9;
+  --base-tap-highlight-color : rgba(0, 0, 0, 0);
+  --base-zindex:10;
+  /* Colors
+  -------------------------- */
+  --color-primary: #4078c0;
+
+  --color-success: #2cbe4e;
+  --color-warning: #ffbd17;
+  --color-danger: #e64340;
+  --color-info: #11c1f3;
+  --color-dark:#333333;
+
+  --color-secondary: color(var(--color-primary) s(99%) l(*0.9));
+  --color-white: #fff;
+  --color-dark-white: color(var(--color-white) blend(var(--color-primary) 2%));
+  --color-black: #000;
+
+  --color-base-black: color(var(--color-primary) h(+6) s(33%) l(18%));
+  --color-light-black: color(var(--color-base-black) h(+5) s(27%) l(27%));
+  --color-extra-light-black: color(var(--color-base-black) h(+2) s(19%) l(35%));
+
+  --color-base-silver: color(var(--color-base-black) h(+3) s(16%) l(58%));
+  --color-light-silver: color(var(--color-base-black) h(+3) s(23%) l(67%));
+  --color-extra-light-silver: color(var(--color-base-black) s(26%) l(80%));
+
+  --color-base-gray: color(var(--color-base-black) s(28%) l(86%));
+  --color-light-gray: color(var(--color-base-black) h(+10) s(33%) l(92%));
+  --color-extra-light-gray: color(var(--color-base-black) h(+6) s(33%) l(95%));
+
+  /* Border
+  -------------------------- */
+  --border-width-base: .02rem;
+  --border-style-base: solid;
+  --border-color-base: rgba(0,0,0,.2);
+  --border-color-hover: var(--color-base-silver);
+  --border-base: var(--border-width-base) var(--border-style-base) var(--border-color-base);
+  --border-radius-base: .06rem;
+  --border-radius-small: .04rem;
+  --border-radius-circle: 100%;
+  --border-radius-after-base: .08rem;
+
+  --border-line-color:#D5D5D6;
+  /* Disable base
+  -------------------------- */
+  --disabled-fill-base: var(--color-extra-light-gray);
+  --disabled-color-base: #bbb;
+  --disabled-border-base: var(--color-base-gray);
+
+   /* Button
+  -------------------------- */
+  --button-multiple:1.25;
+  --button-font-size: .3rem;
+  --button-border-radius: var(--border-radius-base);
+  --button-border-after-radius: var(--border-radius-after-base);
+  --button-padding-vertical: .25rem;
+  --button-padding-horizontal: .25rem;
+
+  --button-large-font-size: calc(var(--button-font-size) * var(--button-multiple));
+  --button-large-padding-vertical: calc(var(--button-padding-vertical) * var(--button-multiple));
+  --button-large-padding-horizontal: calc(var(--button-padding-horizontal) * var(--button-multiple));
+
+  --button-small-font-size: calc(var(--button-font-size) / var(--button-multiple));
+  --button-small-padding-vertical: calc(var(--button-padding-vertical) / var(--button-multiple));
+  --button-small-padding-horizontal: calc(var(--button-padding-horizontal) / var(--button-multiple));
+
+  --button-mini-font-size: calc(var(--button-small-font-size) / var(--button-multiple));
+  --button-mini-padding-vertical: calc(var(--button-small-padding-vertical) / var(--button-multiple));
+  --button-mini-padding-horizontal: calc(var(--button-small-padding-horizontal) / var(--button-multiple));
+
+  --button-default-color: #363636;
+  --button-default-fill: #fff;
+  --button-default-border: #dbdbdb;
+
+  --button-ghost-color: #666;
+  --button-ghost-fill: transparent;
+  --button-ghost-border: #666;
+
+  --button-disabled-color: rgba(0,0,0,.3);
+  --button-disabled-fill: #F7F7F7;
+  --button-disabled-border: rgba(0,0,0,.2);
+
+  --button-primary-border: var(--color-primary);
+  --button-primary-color: var(--color-white);
+  --button-primary-fill: var(--color-primary);
+
+  --button-success-border: var(--color-success);
+  --button-success-color: var(--color-white);
+  --button-success-fill: var(--color-success);
+
+  --button-warning-border: var(--color-warning);
+  --button-warning-color: var(--color-white);
+  --button-warning-fill: var(--color-warning);
+
+  --button-danger-border: var(--color-danger);
+  --button-danger-color: var(--color-white);
+  --button-danger-fill: var(--color-danger);
+
+  --button-dark-border: var(--color-dark);
+  --button-dark-color: var(--color-white);
+  --button-dark-fill: var(--color-dark);
+
+  --button-info-border: var(--color-info);
+  --button-info-color: var(--color-white);
+  --button-info-fill: var(--color-info);
+
+  --button-hover-tint-percent: 20%;
+  --button-active-shade-percent: 15%;
+
+ /* Toast
+  -------------------------- */
+ --toast-background-color:rgba(17,17,17,0.7);
+
+/* Dialog
+  -------------------------- */
+ --dialog-default-btn-color:#353535;
+
+/* Actionsheet
+  -------------------------- */
+  --actionsheet-background-color:#EFEFF4;
+  --actionsheet-border-line-color:var(--base-border-line-color);
+
+/* Cells
+  -------------------------- */
+  --cell-font-size : .28rem;
+  --cell-padding-vertical:.2rem;
+  --cell-padding-horizontal:.3rem;
+  --cell-title-color:#999;
+  --cell-title-font-size : .3rem;
+  --cell-ft-color:#999;
+  --cell-ft-font-size:.26rem;
+  --cell-desc-font-size:.24rem;
+  --cell-arrow-color:#c8c8cd;
+  --cell-arrow-size:.15rem;
+  --cell-border-line-color:var(--base-border-line-color);
+
+/* Panel
+  -------------------------- */
+  --panel-background-color:var(--color-white);
+  --panel-hb-title-color:#999999;
+  --panel-hb-title-font-size:.26rem;
+  --panel-title-color:#363636;
+  --panel-title-font-size:.32rem;
+  --panel-desc-color:var(--panel-hb-title-color);
+  --panel-desc-font-size:.24rem;
+  --panel-info-color:#CECECE;
+
+/* Divider
+-------------------------- */
+
+  --divider-font-color : #999;
+
+/* Message box
+-------------------------- */
+ --message-box-background-color:#fff;
+ --message-box-desc-color:#888;
+
+/* Msg
+-------------------------- */
+  --msg-title-font-size:.2rem;
+  --msg-desc-font-size:.14rem;
+  --msg-desc-font-color:#999;
+  --msg-extra-font-size:.14rem;
+  --msg-extra-font-color:var(--msg-desc-font-color);
+
+/* Tag
+-------------------------- */
+  --tag-border-radius:.03rem;
+
+  --tag-default-font-size:.24rem;
+  --tag-default-height:.48rem;
+  --tag-default-padding:.12rem 0.2rem;
+
+/* Tag
+-------------------------- */
+  --toptips-default-background-color:rgba(0,0,0,.8);
+
+/* tab
+  --------------------------------*/
+  --tab-height:.88rem;
+  --tab-background-color : #fff;
+  --tab-font-size:.32rem;
+  --tab-text-default-color : #666;
+  --tab-text-active-color :var(--color-success);
+  --tab-text-disabled-color : #ddd;
+  --tab-bar-active-color : ;
+  --tab-ink-bar-height:.04rem;
+
+  --tab-easing-in-out: cubic-bezier(0.35, 0, 0.25, 1);
+  --tab-effect-duration: .3s;
+
+/* tabbar
+  --------------------------------*/
+ --tabbar-backgroound-color:#F7F7FA;
+ --tabbar-top-line-color:#C0BFC4;
+ --tabbar-item-font-color:#999;
+ --tabbar-item-on-font-color:var(--color-success);
+
+/* wepay
+  --------------------------------*/
+  --wepay-inner-background-color:var(--color-white);
+  --wepay-inner-padding:.32rem;
+  --wepay-title-font-size:.24rem;
+  --wepay-title-font-color:#333333;
+  --wepay-input-font-color:var(--wepay-title-font-color);
+  --wepay-strong-font-color:var(--color-black);
+  --wepay-intro-font-color:#9e9e9e;
+
+/* notice
+  --------------------------------*/
+  --notice-default-background-color:#fefcec;
+  --notice-default-font-color:#f76a24;
+  --notice-default-font-size:.3rem;
+  --notice-height:.88rem;
+  --notice-icon-size:.4rem;
+  --notice-tint-percent:90%;
+  --notice-shade-percent:30%;
+}

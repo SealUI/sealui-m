@@ -1,0 +1,170 @@
+@charset "UTF-8";
+@import "./common/var.css";
+@import './mixins/setOnepx';
+@import './mixins/text';
+@import './mixins/messagebox';
+
+@component-namespace sealui {
+    @b message-box {
+        position: fixed;
+        z-index: 5000;
+        width: 80%;
+        max-width: 6rem;
+        top: 50%;
+        left: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        transition: .3s;
+        background-color:var(--message-box-background-color);
+        text-align: center;
+        border-radius: .06rem;
+        overflow: hidden;
+        backface-visibility: hidden;
+
+        @e hd{
+            padding: 2em 1.6em 1em;
+        }
+        @e title{
+            font-weight: 400;
+            font-size: .36rem;
+            line-height: .42rem;
+        }
+        @e close{
+            position: absolute;
+            display: block;
+            right: 0;
+            top: 0;
+            height: .7rem;
+            width: .7rem;
+            text-align: center;
+            padding-top:.2rem;
+            color:#999;
+            &:before{
+               font-size: .4rem
+            }
+        }
+        @e bd{
+            padding: 0 2em 1em;
+            min-height: .8rem;
+            font-size: .3rem;
+            line-height: 1.3;
+            word-wrap: break-word;
+            word-break: break-all;
+            color: var(--message-box-desc-color);
+            &:first-child{
+                padding:1.7em .4rem 1.7em;
+                color:var(--dialog-default-btn-color);
+            }
+        }
+        @e ft{
+            position: relative;
+            line-height: .88rem;
+            font-size: .3rem;
+            display: flex;
+            &:after {
+                @mixin setTopLine var(--border-line-color);
+            }
+        }
+        @e btn{
+            display: block;
+            flex: 1;
+            color: var(--color-primary);
+            text-decoration: none;
+            -webkit-tap-highlight-color:var(--base-tap-highlight-color);
+            &:active {
+                background-color:var(--base-background-color-active);
+            }
+            position: relative;
+            &:after {
+                content: " ";
+                @mixin setLeftLine var(--border-line-color);
+            }
+            &:first-child {
+                &:after {
+                    display: none;
+                }
+            }
+            &:last-child{
+                font-weight: 500
+            }
+            @when disabled{
+                pointer-events: none;
+                opacity: .5;
+                color:#c2c2c2;
+            }
+            @when default{
+                color: var(--dialog-default-btn-color);
+            }
+            @when primary{
+                @mixin messagebox-color var(--color-primary);
+            }
+            @when success{
+                @mixin messagebox-color var(--color-success);
+            }
+            @when warning{
+                @mixin messagebox-color var(--color-warning);
+            }
+            @when danger{
+                @mixin messagebox-color var(--color-danger);
+            }
+            @when info{
+                @mixin messagebox-color var(--color-info);
+            }
+            @when dark{
+                @mixin messagebox-color var(--color-dark);
+            }
+        }
+        &.sealui-skin_android{
+            text-align: left;
+            box-shadow: 0 .06rem .3rem 0 rgba(0, 0, 0, .1);
+
+            .sealui-message-box__title{
+                font-size: .21rem;
+            }
+            .sealui-message-box__hd{
+                text-align: left;
+            }
+            .sealui-message-box__bd{
+                color:#999;
+                padding: 0.25em 1.6em 2em;
+                font-size: .34rem;
+                text-align: left;
+                &:first-child{
+                    padding: 1.6em 1.6em 2em;
+                    color:#353535;
+                }
+            }
+            .sealui-message-box__ft{
+                display: block;
+                text-align: right;
+                line-height: .84rem;
+                font-size: .32rem;
+                padding: 0 1.6em 0.7em;
+                &:after{
+                    display: none;
+                }
+            }
+            .sealui-message-box__btn{
+                display: inline-block;
+                vertical-align: top;
+                padding:0 .8em;
+                &:after{
+                    display: none;
+                }
+
+                &:active{
+                    background-color: var(--base-background-color-active)
+                }
+                &:visited{
+                    background-color:  var(--base-background-color-active)
+                }
+                &:last-child{
+                    margin-right: -.8em;
+                }
+                &_default {
+                    color: #808080;
+                }
+            }
+
+        }
+    }
+}

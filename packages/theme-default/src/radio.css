@@ -1,0 +1,109 @@
+@charset "UTF-8";
+@import "./common/var.css";
+@import './mixins/setOnepx';
+@import './mixins/text';
+
+@component-namespace sealui {
+    @b radio {
+        @e label{
+            vertical-align: middle;
+        }
+        @e icon{
+            width: .6rem;
+            height: .6rem;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: .1rem
+        }
+        @e input{
+            width: 100%;
+            border: 0;
+            outline: 0;
+            -webkit-appearance: none;
+            background-color: transparent;
+            font-size: inherit;
+            color: inherit;
+            height: 1.41176471em;
+            line-height: 1.41176471;
+        }
+    }
+    @b check{
+        + .sealui-radio-icon-checked{
+            &:before{
+                font-size: .44rem;
+                content: "";
+                color:#C9C9C9;
+            }
+        }
+        &:checked{
+            + i.sealui-radio-icon-checked{
+                &:before{
+                    content: "\EA08";
+                    color:var(--color-primary);
+                }
+            }
+        }
+
+        @when primary{
+            &:checked{
+                + i.sealui-radio-icon-checked{
+                    &:before{
+                        color:var(--color-primary);
+                    }
+                }
+            }
+        }
+
+        @when success{
+            &:checked{
+                + i.sealui-radio-icon-checked{
+                    &:before{
+                        color:var(--color-success);
+                    }
+                }
+            }
+        }
+
+        @when warning{
+            &:checked{
+                + i.sealui-radio-icon-checked{
+                    &:before{
+                        color:var(--color-warning);
+                    }
+                }
+            }
+        }
+
+        @when danger{
+            &:checked{
+                + i.sealui-radio-icon-checked{
+                    &:before{
+                        color:var(--color-danger);
+                    }
+                }
+            }
+        }
+
+        @when info{
+            &:checked{
+                + i.sealui-radio-icon-checked{
+                    &:before{
+                        color:var(--color-info);
+                    }
+                }
+            }
+        }
+
+        @when dark{
+            &:checked{
+                + i.sealui-radio-icon-checked{
+                    &:before{
+                        color:var(--color-dark);
+                    }
+                }
+            }
+        }
+
+    }
+
+}

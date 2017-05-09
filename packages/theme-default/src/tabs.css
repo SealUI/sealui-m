@@ -1,0 +1,54 @@
+@charset "UTF-8";
+@import "./common/var.css";
+@import './mixins/setOnepx';
+@import './mixins/tabs';
+
+@component-namespace sealui {
+    @b tabs {
+        display: flex;
+        background-color: #fff;
+        height:var(--tab-height);
+        position: relative;
+        & button {
+          padding: 0;
+          border: 0;
+          outline: 0;
+          background: 0 0;
+          appearance: none;
+        }
+        @e ink-bar{
+            position: absolute;
+            height: var(--tab-ink-bar-height);
+            bottom: 0;
+            left: 0;
+            background-color:var(--tab-text-active-color);
+            &-transition-forward {
+                transition: right var(--tab-effect-duration) var(--tab-easing-in-out), left var(--tab-effect-duration) var(--tab-easing-in-out) calc(var(--tab-effect-duration) * 0.3);
+            }
+            &-transition-backward {
+                transition: right var(--tab-effect-duration) var(--tab-easing-in-out) calc(var(--tab-effect-duration) * 0.3), left var(--tab-effect-duration) var(--tab-easing-in-out);
+            }
+        }
+        @when primary{
+            @mixin tabs-variant var(--color-primary)
+        }
+        @when success{
+            @mixin tabs-variant var(--color-success)
+        }
+        @when warning{
+            @mixin tabs-variant var(--color-warning)
+        }
+        @when danger{
+            @mixin tabs-variant var(--color-danger)
+        }
+        @when info{
+            @mixin tabs-variant var(--color-info)
+        }
+        @when dark{
+            @mixin tabs-variant var(--color-dark)
+        }
+        &no-animate .sealui-tabs__item.sealui-tabs-selected {
+          background: 0 0;
+        }
+    }
+}

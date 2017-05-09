@@ -1,0 +1,89 @@
+@charset "UTF-8";
+@import "./common/var.css";
+@import './mixins/setOnepx';
+@import './mixins/text';
+
+@component-namespace sealui {
+    @b actionsheet {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        transform: translate(0, 100%);
+        backface-visibility: hidden;
+        z-index: 5000;
+        width: 100%;
+        background-color:var(--actionsheet-background-color);
+        transition: transform .3s;
+
+        @e title{
+            text-align: center;
+            font-size: .28rem;
+            padding:.2rem 0;
+            color:#888;
+            position: relative;
+            &:after {
+                @mixin setBottomLine var(--actionsheet-border-line-color);
+            }
+        }
+        @e menu{
+            background-color: #FFFFFF;
+        }
+        @e action {
+            margin-top: .12rem;
+            background-color: #FFFFFF;
+        }
+        @e cell {
+            position: relative;
+            padding: .2rem 0;
+            text-align: center;
+            font-size: .32rem;
+            &:before {
+                @mixin setTopLine var(--actionsheet-border-line-color);
+            }
+            &:active{
+                background-color: rgba(0,0,0,.06);
+            }
+            &:first-child{
+                &:before{
+                    display: none;
+                }
+            }
+        }
+        &_toggle{
+            transform: translate(0, 0);
+        }
+    }
+}
+
+.sealui-skin_android{
+    & .sealui-actionsheet {
+        left: 50%;
+        top: 50%;
+        bottom: auto;
+        width: 80%;
+        background: transparent;
+        transform: translate3d(-50%, -50%,0);
+    }
+    & .sealui-actionsheet__action,
+    & .sealui-actionsheet__title{
+        display: none;
+    }
+    & .sealui-actionsheet__menu {
+        border-radius: .04rem;
+        box-shadow: 0 .12rem .6rem 0 rgba(0,0,0,.1);
+    }
+    & .sealui-actionsheet__cell {
+        padding: .26rem .48rem;
+        font-size: .32rem;
+        line-height: 1.4;
+        text-align: left;
+        &:first-child {
+            border-top-left-radius: .04rem;
+            border-top-right-radius: .04rem;
+        }
+        &:last-child {
+            border-bottom-left-radius: .04rem;
+            border-bottom-right-radius: .04rem;
+        }
+    }
+}

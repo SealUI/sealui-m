@@ -1,11 +1,11 @@
- for sublime text
+#for sublime text
 *.tmlanguage.cache
 *.tmPreferences.cache
 *.stTheme.cache
 
 # workspace files are user-specific
 *.sublime-workspace
-# *.sublime-project
+*.sublime-project
 
 # sftp configuration file
 sftp-config.json
@@ -63,3 +63,4 @@ node_modules
 *.log
 lib/
 .npmignore
+*.bak

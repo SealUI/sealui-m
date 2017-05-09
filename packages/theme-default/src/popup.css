@@ -1,0 +1,132 @@
+@charset "UTF-8";
+@import "./common/var.css";
+@import './mixins/setOnepx';
+@import './mixins/text';
+@import './mixins/mobile';
+@component-namespace sealui {
+    @b popup {
+        position: fixed;
+        background-color: #FFF;
+        z-index: calc(var(--base-zindex) * 1500 + 1 );
+        transition: transform .3s;
+        pointer-events: none;
+        @e hd{
+            font-size: .32rem;
+            line-height: .8rem;
+            background-color: #f8f8f8;
+            text-align: center;
+        }
+        @e bd{
+            font-size: .26rem;
+            line-height: 1.5;
+            padding:.3rem;
+        }
+        @e ft{
+            position: relative;
+            line-height: .88rem;
+            font-size: .3rem;
+            display: flex;
+            &:after {
+                @mixin setTopLine var(--base-border-line-color);
+            }
+        }
+        @e btn{
+            display: block;
+            flex: 1;
+            color: var(--color-primary);
+            text-decoration: none;
+            -webkit-tap-highlight-color:var(--base-tap-highlight-color);
+            text-align: center;
+            &:active {
+                @mixin tapColor var(--base-background-color-active);
+            }
+            position: relative;
+            &:after {
+                content: " ";
+                @mixin setLeftLine var(--base-border-line-color);
+            }
+            &:first-child {
+                &:after {
+                    display: none;
+                }
+            }
+            &:last-child{
+                font-weight: 500
+            }
+            @when disabled{
+                pointer-events: none;
+                opacity: .5;
+                color:#c2c2c2;
+            }
+            @when default{
+                color: var(--dialog-default-btn-color);
+            }
+            @when primary{
+                color:var(--color-primary);
+            }
+            @when success{
+                color:var(--color-success);
+            }
+            @when warning{
+                color:var(--color-warning);
+            }
+            @when danger{
+                color:var(--color-danger);
+            }
+            @when info{
+                color:var(--color-info);
+            }
+            @when dark{
+                color:var(--color-dark);
+            }
+        }
+        @e left {
+            transform: translate(-100%, 0);
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 50%;
+        }
+        @e right {
+            transform: translate(100%, 0);
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: 50%;
+        }
+        @e bottom {
+            transform: translate(0, 100%);
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 50%;
+        }
+        @e center{
+            background-color: #FFF;
+            z-index: calc(var(--base-zindex) * 1500 + 2 );
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            opacity: 0;
+            transform: translate(-50%, -50%) scale(.8);
+            transform-origin: 50% 50%;
+            transition: all .1s;
+            border-radius: 2px;
+            pointer-events: none;
+            width: 90%;
+            border-radius: var(--border-radius-base);
+            & .sealui-popup__hd{
+                border-radius: var(--border-radius-base) var(--border-radius-base) 0 0;
+            }
+            &.sealui-popup__show {
+                pointer-events: auto;
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+        @e show {
+            pointer-events: auto;
+            transform: translate(0, 0);
+        }
+    }
+}

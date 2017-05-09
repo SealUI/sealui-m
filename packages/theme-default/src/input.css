@@ -1,0 +1,72 @@
+@charset "UTF-8";
+@import "./common/var.css";
+
+@component-namespace sealui {
+    @b input-warp{
+        & .sealui-icon{
+            margin-left:.1rem;
+            &::before{
+                vertical-align: middle;
+                font-size: .36rem;
+            }
+        }
+        &:active{
+            background-color:var(--base-tap-highlight-color);
+        }
+        & .sealui-icon-warn:before{
+            color:var(--color-danger);
+        }
+        & .sealui-icon-clear:before{
+            content: "\EA0D"
+        }
+        & .sealui-icon-success:before{
+            color:var(--color-success);
+            content: "\EA06"
+        }
+
+        & .sealui-input-placeholder-right input::-webkit-input-placeholder {
+          text-align: right;
+        }
+        & .sealui-input-placeholder-center input::-webkit-input-placeholder {
+          text-align: center;
+        }
+        /*
+        & .sealui-icon-warn:before,
+        & .sealui-icon-success:before{
+            font-size: .18rem;
+        }
+        */
+    }
+    @b input{
+        width: 100%;
+        border: 0;
+        outline: 0;
+        -webkit-appearance: none;
+        background-color: transparent;
+        font-size: inherit;
+        color: inherit;
+        height: 1.41176471em;
+        line-height: 1.41176471;
+
+        // hides the spin-button
+        &::-webkit-outer-spin-button, &::-webkit-inner-spin-button{
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        @e error-tip{
+            display:none;
+            position: fixed;
+            transform: translateZ(0);
+            top: 0;
+            left: 0;
+            right: 0;
+            padding:5px;
+            font-size:14px;
+            text-align: center;
+            color: #FFF;
+            z-index: 5000;
+        }
+    }
+
+}
+

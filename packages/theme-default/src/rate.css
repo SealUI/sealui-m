@@ -1,0 +1,28 @@
+@charset "UTF-8";
+@import "./common/var.css";
+@import './mixins/setOnepx';
+@import './mixins/text';
+
+@component-namespace sealui {
+    @b rate {
+        display: flex;
+        align-items: center;
+
+        & a {
+            &:after {
+              content: 'xx';
+              /*font-family: @iconfont-inlay;*/
+              font-size: inherit;
+              color: inherit;
+            }
+            &.rate-active:after {
+              content: 'yy';
+            }
+        }
+        @e text{
+            color: #657180;
+            margin-left: .1rem;
+            font-size: .3rem;
+        }
+    }
+}

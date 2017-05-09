@@ -1,0 +1,5 @@
+@import './mixins/setOnepx';
+
+@define-mixin messagebox-color $color {
+    color: $color;
+}

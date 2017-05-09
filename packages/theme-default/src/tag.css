@@ -1,0 +1,110 @@
+@charset "UTF-8";
+@import "./common/var.css";
+@import './mixins/setOnepx';
+@import './mixins/text';
+@import './mixins/tag';
+
+@component-namespace sealui {
+    @b tag {
+        display: inline-block;
+        line-height:1.2;
+        padding: var(--tag-default-padding);
+        border: 0 none;
+        border-radius:var(--tag-border-radius);
+        background: var(--button-default-fill);
+        color: var(--button-default-color);
+        font-size: var(--tag-default-font-size);
+        vertical-align: middle;
+        cursor: pointer;
+        white-space: nowrap;
+        position: relative;
+        &:after{
+            content: " ";
+            width: 200%;
+            height: 200%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border:var(--border-base);
+            transform: scale(0.5);
+            transform-origin: 0 0;
+            box-sizing: border-box;
+            border-radius:calc(var(--tag-border-radius) * 2 );
+        }
+        & i.sealui-icon{
+            margin-left: .1rem;
+            color: #666;
+            opacity: .66;
+            position: relative;
+            top: 0rem;
+            margin-right: -.1rem;
+            font-size: .2rem;
+            z-index:100;
+
+            &:before{
+                font-size: .3rem
+            }
+        }
+        @when dot{
+            background: var(--button-default-fill);
+            color: var(--button-default-color);
+            &:after{
+                border:var(--border-base);
+            }
+        }
+        @when border{
+            background: var(--button-default-fill);
+            color: var(--button-default-color);
+            &:after{
+                border:var(--border-base);
+            }
+        }
+        @when rounded{
+            border-radius: 290486px;
+            &:after{
+                border-radius: calc(290486px * 2);
+            }
+        }
+        @e dot{
+            display: inline-block;
+            width: .12rem;
+            height: .12rem;
+            margin-right: .08rem;
+            border-radius: 50%;
+            background: rgba(0,0,0,.2);
+            position: relative;
+            top: 0rem;
+        }
+        @e text{
+            position: relative;
+            padding-right:.1rem;
+            &:after{
+                @mixin setRightLine var(--border-color-base);
+                top:-0.1rem;
+                bottom:-0.1rem;
+                height:auto;
+                border-width: .02rem;
+            }
+        }
+
+        @when primary{
+            @mixin tag-variant var(--color-primary);
+        }
+        @when info{
+            @mixin tag-variant var(--color-info);
+        }
+        @when success{
+            @mixin tag-variant var(--color-success);
+        }
+        @when warning{
+            @mixin tag-variant var(--color-warning);
+        }
+        @when danger{
+            @mixin tag-variant var(--color-danger);
+        }
+        @when dark{
+            @mixin tag-variant var(--color-dark);
+        }
+
+    }
+}

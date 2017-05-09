@@ -1,0 +1,40 @@
+@charset "UTF-8";
+@import "./common/var.css";
+@import './mixins/setOnepx';
+@import './mixins/text';
+
+@component-namespace sealui {
+    @b spinner {
+        stroke: #444;
+        fill: #444;
+        vertical-align: middle;
+        display: inline-block;
+        width: .28rem;
+        height: .28rem;
+
+        &svg{
+            width: .28rem;
+            height: .28rem;
+        }
+        &.sealui-spinner-inverse {
+            stroke: #fff;
+            fill: #fff;
+        }
+        &-android {
+            stroke: #4b8bf4;
+        }
+        &-spiral .stop1 {
+            stop-color: #fff;
+            stop-opacity: 0;
+        }
+        &-spiral.sealui-spinner-inverse .stop1 {
+            stop-color: #000;
+        }
+        &-spiral.sealui-spinner-inverse .stop2 {
+            stop-color: #fff;
+        }
+    }
+    .sealui-spinner-ios, .sealui-spinner-ios-small {
+        stroke: #69717d;
+    }
+}

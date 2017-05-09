@@ -1,0 +1,192 @@
+@charset "UTF-8";
+@import "./common/var.css";
+@import './mixins/button';
+@import './mixins/setOnepx';
+@import './mixins/text';
+
+@component-namespace sealui {
+    @b button {
+        display: inline-block;
+        line-height: 1;
+        white-space: nowrap;
+        cursor: pointer;
+        background: var(--button-default-fill);
+        border: 0 none;
+        color: var(--button-default-color);
+        -webkit-appearance: none;
+        text-align: center;
+        box-sizing: border-box;
+        outline: none;
+        margin: 0;
+        position: relative;
+        @utils-user-select none;
+        &:after{
+            content: " ";
+            width: 200%;
+            height: 200%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            border:var(--border-base);
+            transform: scale(0.5);
+            transform-origin: 0 0;
+            box-sizing: border-box;
+            border-radius:var(--border-radius-after-base);
+        }
+        &:active {
+            background: shade(var(--button-default-fill),5%);
+            color: var(--button-default-color);
+            outline: none;
+            &:after{
+                border:var(--border-base);
+            }
+        }
+
+        &::-moz-focus-inner {
+            border: 0;
+        }
+
+        & [class*="sealui-icon-"] {
+          & + span {
+            margin-left: .05rem;
+          }
+        }
+
+        @when block {
+            display: block;
+            width: 100%;
+        }
+        @when circle {
+            border-radius:1rem;
+            &:after{
+                border-radius:2rem;
+            }
+        }
+        @when disabled {
+              &,
+              &:active{
+                opacity: .5;
+                pointer-events: none;
+                background-image: none;
+                /*
+                color: var(--button-disabled-color);
+                background-color: var(--button-disabled-fill);
+                border-color: var(--button-disabled-border);
+                */
+            }
+            &.is-plain {
+                &{
+                  background-color: var(--color-white);
+
+                  color: var(--color-extra-light-silver);
+                }
+              }
+        }
+
+        @mixin button-size var(--button-padding-vertical), var(--button-padding-horizontal), var(--button-font-size), var(--button-border-radius);
+        @when primary {
+            @mixin button-variant var(--button-primary-color), var(--button-primary-fill), var(--button-primary-border);
+        }
+        @when info {
+            @mixin button-variant var(--button-info-color), var(--button-info-fill), var(--button-info-border);
+        }
+        @when success {
+            @mixin button-variant var(--button-success-color), var(--button-success-fill), var(--button-success-border);
+        }
+        @when warning {
+            @mixin button-variant var(--button-warning-color), var(--button-warning-fill), var(--button-warning-border);
+        }
+        @when danger {
+            @mixin button-variant var(--button-danger-color), var(--button-danger-fill), var(--button-danger-border);
+        }
+        @when dark {
+            @mixin button-variant var(--button-dark-color), var(--button-dark-fill), var(--button-dark-border);
+        }
+        @when ghost {
+            @mixin button-variant var(--button-ghost-color), var(--button-ghost-fill), var(--button-ghost-border);
+        }
+
+        @when large {
+          @mixin button-size var(--button-large-padding-vertical), var(--button-large-padding-horizontal), var(--button-large-font-size), var(--button-border-radius);
+        }
+        @when small {
+          @mixin button-size var(--button-small-padding-vertical), var(--button-small-padding-horizontal), var(--button-small-font-size), var(--border-radius-small);
+        }
+        @when mini {
+          @mixin button-size var(--button-mini-padding-vertical), var(--button-mini-padding-horizontal), var(--button-mini-font-size), var(--border-radius-small);
+        }
+
+    }
+
+    @b button-group {
+    @utils-clearfix;
+    display: inline-block;
+    vertical-align: middle;
+
+    & .sealui-button {
+      float: left;
+      position: relative;
+      & + .sealui-button {
+        margin-left: 0;
+      }
+
+      &:first-child {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        &:after{
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+        }
+
+      }
+      &:last-child {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        &:after{
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+        }
+
+      }
+      &:not(:first-child):not(:last-child) {
+        border-radius: 0;
+        &:after{
+            border-radius: 0;
+        }
+      }
+      &:not(:last-child) {
+        margin-right: -.01rem;
+      }
+
+      &:focus,
+      &:active {
+        z-index: 1;
+      }
+
+      @when active {
+        z-index: 1;
+      }
+    }
+
+    @each $type in (primary, success, warning, danger, info) {
+      .is-$type {
+        &:first-child {
+          &:after{
+            border-right-color: rgba(var(--color-white), 0.5);
+          }
+        }
+        &:last-child {
+          &:after{
+            border-left-color: rgba(var(--color-white), 0.5);
+          }
+        }
+        &:not(:first-child):not(:last-child) {
+          &:after{
+            border-left-color: rgba(var(--color-white), 0.5);
+            border-right-color: rgba(var(--color-white), 0.5);
+          }
+        }
+      }
+    }
+  }
+}

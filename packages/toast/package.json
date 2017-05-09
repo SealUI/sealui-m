@@ -1,0 +1,15 @@
+{
+    "name": "seal-toast",
+    "version": "0.0.1",
+    "description": "A toast component for Vue.js.",
+    "keywords": [
+        "SealUI",
+        "vue",
+        "component"
+    ],
+    "main": "./lib/index.js",
+    "repository": "https://github.com/SealUI/sealui-m/tree/master/packages/toast",
+    "author": "SealUI",
+    "license": "MIT",
+    "dependencies": {}
+}

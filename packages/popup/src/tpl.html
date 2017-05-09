@@ -1,0 +1,18 @@
+<div class="<%=className%>">
+    <div class="sealui-mask"></div>
+    <div class="sealui-popup sealui-popup__<%= position %>">
+        <% if(title){ %>
+        <div class="sealui-popup__hd"><%= title %></div>
+        <% } %>
+        <% if(content){ %>
+        <div class="sealui-popup__bd"><%= content %></div>
+        <% } %>
+        <% if(buttons){ %>
+        <div class="sealui-popup__ft">
+            <% for(var i = 0; i < buttons.length; i++){ %>
+            <a href="javascript:;" class="sealui-popup__btn <% if (buttons[i]['type']){%>is-<%=buttons[i]['type']%><% }else{ %>is-default<% } %> <% if(buttons[i]['disabled']){%>is-disabled<%}%>"><%=buttons[i]['label']%></a>
+            <% } %>
+        </div>
+        <% } %>
+    </div>
+</div>

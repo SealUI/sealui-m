@@ -1,0 +1,88 @@
+@charset "UTF-8";
+@import "./common/var.css";
+@import './mixins/setOnepx';
+@import './mixins/text';
+
+@component-namespace sealui {
+    @b switch {
+        position: relative;
+        display: flex;
+        width: 1.04rem;
+        height: .64rem;
+        left: 0;
+        border: 1px solid #DFDFDF;
+        border-radius: .32rem;
+        background-color: #DFDFDF;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        &:before,
+        &:after {
+          content: '';
+          position: absolute;
+          top: 0.005rem;
+          left: 0rem;
+          height:.615rem;
+          border-radius:.3rem;
+          transition: transform .3s;
+        }
+        &:before {
+          width:1.015rem;
+          background-color: #FDFDFD;
+        }
+        &:after {
+          width:.615rem;
+          background-color: #FFF;
+          box-shadow: 0 1px .02rem rgba(0, 0, 0, .4);
+        }
+        &:checked {
+          border-color: var(--color-primary);
+          background-color:var(--color-primary);
+          &:before {
+            transform: scale(0);
+          }
+          &:after {
+            transform: translateX(.4rem);
+          }
+        }
+
+        @when success{
+           &:checked {
+            background-color: var(--color-success);
+            border-color: var(--color-success);
+           }
+        }
+
+        @when danger{
+           &:checked {
+            background-color: var(--color-danger);
+            border-color: var(--color-danger);
+           }
+        }
+
+        @when warning{
+           &:checked {
+            background-color: var(--color-warning);
+            border-color: var(--color-warning);
+           }
+        }
+
+        @when info{
+           &:checked {
+            background-color: var(--color-info);
+            border-color: var(--color-info);
+           }
+        }
+
+        @when dark{
+           &:checked {
+            background-color: var(--color-dark);
+            border-color: var(--color-dark);
+           }
+        }
+
+        @when disabled{
+            pointer-events: none;
+            opacity: .6
+        }
+    }
+}

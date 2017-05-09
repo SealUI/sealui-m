@@ -1,0 +1,29 @@
+@charset "UTF-8";
+@import "./common/var.css";
+
+@component-namespace sealui {
+    @b rollnotice {
+        overflow: hidden;
+        width: 100%;
+        background-color: #fff;
+
+        @e box{
+            height: inherit;
+            &.align-left {
+              justify-content: flex-start;
+            }
+            &.align-right {
+              justify-content: flex-end;
+            }
+            &.align-center {
+              justify-content: center;
+            }
+        }
+        @e item{
+            height: inherit;
+            display: flex;
+            align-items: center;
+            justify-content: inherit;
+        }
+    }
+}

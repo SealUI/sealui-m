@@ -1,0 +1,1538 @@
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: "seaui-fonts";
+    src: url('data:application/octet-stream;base64,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') format('truetype');
+}
+[class^="sealui-icon"], [class*=" sealui-icon"],
+[class^="sealui-icon-"], [class*=" sealui-icon-"] {
+    display: inline-block;
+    vertical-align: middle;
+    font: normal normal normal 14px/1 "seaui-fonts";
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    &:before{
+        // 平滑升级
+        display: inline-block;
+        margin-left: .2em;
+        margin-right: .2em;
+    }
+}
+.sealui-icon-circle:before { content: "\EA01" } /* '' */
+.sealui-icon-download:before { content: "\EA02" } /* '' */
+.sealui-icon-info:before { content: "\EA03" } /* '' */
+.sealui-icon-safe-success:before { content: "\EA04" } /* '' */
+.sealui-icon-safe-warn:before { content: "\EA05" } /* '' */
+.sealui-icon-success:before { content: "\EA06" } /* '' */
+.sealui-icon-success-circle:before { content: "\EA07" } /* '' */
+.sealui-icon-success-no-circle:before { content: "\EA08" } /* '' */
+.sealui-icon-waiting:before { content: "\EA09" } /* '' */
+.sealui-icon-waiting-circle:before { content: "\EA0A" } /* '' */
+.sealui-icon-warn:before { content: "\EA0B" } /* '' */
+.sealui-icon-info-circle:before { content: "\EA0C" } /* '' */
+.sealui-icon-cancel:before { content: "\EA0D" } /* '' */
+.sealui-icon-search:before { content: "\EA0E" } /* '' */
+.sealui-icon-clear:before { content: "\EA0F" } /* '' */
+.sealui-icon-back:before { content: "\EA10" } /* '' */
+.sealui-icon-delete:before { content: "\EA11" } /* '' */
+
+
+/*
+@font-face {
+ font-family: 'sealui-icons';
+ src:url("fonts/icons.eot?v=2.0.0");
+ src:url("fonts/icons.eot?v=2.0.0#iefix") format("embedded-opentype"),
+  url("fonts/icons.ttf?v=2.0.0") format("truetype"),
+  url("fonts/icons.woff?v=2.0.0") format("woff"),
+  url("fonts/icons.svg?v=2.0.0#Icons") format("svg");
+ font-weight: normal;
+ font-style: normal;
+}
+
+[class^="sealui-icon"], [class*=" sealui-icon"],
+[class^="sealui-icon-"], [class*=" sealui-icon-"]{
+    display: inline-block;
+    font-family: "sealui-icons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-rendering: auto;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    vertical-align: middle;
+}
+
+.sealui-icon-alert:before { content: "\f101"; }
+
+.sealui-icon-alert-circled:before { content: "\f100"; }
+
+.sealui-icon-android-add:before { content: "\f2c7"; }
+
+.sealui-icon-android-add-circle:before { content: "\f359"; }
+
+.sealui-icon-android-alarm-clock:before { content: "\f35a"; }
+
+.sealui-icon-android-alert:before { content: "\f35b"; }
+
+.sealui-icon-android-apps:before { content: "\f35c"; }
+
+.sealui-icon-android-archive:before { content: "\f2c9"; }
+
+.sealui-icon-android-arrow-back:before { content: "\f2ca"; }
+
+.sealui-icon-android-arrow-down:before { content: "\f35d"; }
+
+.sealui-icon-android-arrow-dropdown:before { content: "\f35f"; }
+
+.sealui-icon-android-arrow-dropdown-circle:before { content: "\f35e"; }
+
+.sealui-icon-android-arrow-dropleft:before { content: "\f361"; }
+
+.sealui-icon-android-arrow-dropleft-circle:before { content: "\f360"; }
+
+.sealui-icon-android-arrow-dropright:before { content: "\f363"; }
+
+.sealui-icon-android-arrow-dropright-circle:before { content: "\f362"; }
+
+.sealui-icon-android-arrow-dropup:before { content: "\f365"; }
+
+.sealui-icon-android-arrow-dropup-circle:before { content: "\f364"; }
+
+.sealui-icon-android-arrow-forward:before { content: "\f30f"; }
+
+.sealui-icon-android-arrow-up:before { content: "\f366"; }
+
+.sealui-icon-android-attach:before { content: "\f367"; }
+
+.sealui-icon-android-bar:before { content: "\f368"; }
+
+.sealui-icon-android-bicycle:before { content: "\f369"; }
+
+.sealui-icon-android-boat:before { content: "\f36a"; }
+
+.sealui-icon-android-bookmark:before { content: "\f36b"; }
+
+.sealui-icon-android-bulb:before { content: "\f36c"; }
+
+.sealui-icon-android-bus:before { content: "\f36d"; }
+
+.sealui-icon-android-calendar:before { content: "\f2d1"; }
+
+.sealui-icon-android-call:before { content: "\f2d2"; }
+
+.sealui-icon-android-camera:before { content: "\f2d3"; }
+
+.sealui-icon-android-cancel:before { content: "\f36e"; }
+
+.sealui-icon-android-car:before { content: "\f36f"; }
+
+.sealui-icon-android-cart:before { content: "\f370"; }
+
+.sealui-icon-android-chat:before { content: "\f2d4"; }
+
+.sealui-icon-android-checkbox:before { content: "\f374"; }
+
+.sealui-icon-android-checkbox-blank:before { content: "\f371"; }
+
+.sealui-icon-android-checkbox-outline:before { content: "\f373"; }
+
+.sealui-icon-android-checkbox-outline-blank:before { content: "\f372"; }
+
+.sealui-icon-android-checkmark-circle:before { content: "\f375"; }
+
+.sealui-icon-android-clipboard:before { content: "\f376"; }
+
+.sealui-icon-android-close:before { content: "\f2d7"; }
+
+.sealui-icon-android-cloud:before { content: "\f37a"; }
+
+.sealui-icon-android-cloud-circle:before { content: "\f377"; }
+
+.sealui-icon-android-cloud-done:before { content: "\f378"; }
+
+.sealui-icon-android-cloud-outline:before { content: "\f379"; }
+
+.sealui-icon-android-color-palette:before { content: "\f37b"; }
+
+.sealui-icon-android-compass:before { content: "\f37c"; }
+
+.sealui-icon-android-contact:before { content: "\f2d8"; }
+
+.sealui-icon-android-contacts:before { content: "\f2d9"; }
+
+.sealui-icon-android-contract:before { content: "\f37d"; }
+
+.sealui-icon-android-create:before { content: "\f37e"; }
+
+.sealui-icon-android-delete:before { content: "\f37f"; }
+
+.sealui-icon-android-desktop:before { content: "\f380"; }
+
+.sealui-icon-android-document:before { content: "\f381"; }
+
+.sealui-icon-android-done:before { content: "\f383"; }
+
+.sealui-icon-android-done-all:before { content: "\f382"; }
+
+.sealui-icon-android-download:before { content: "\f2dd"; }
+
+.sealui-icon-android-drafts:before { content: "\f384"; }
+
+.sealui-icon-android-exit:before { content: "\f385"; }
+
+.sealui-icon-android-expand:before { content: "\f386"; }
+
+.sealui-icon-android-favorite:before { content: "\f388"; }
+
+.sealui-icon-android-favorite-outline:before { content: "\f387"; }
+
+.sealui-icon-android-film:before { content: "\f389"; }
+
+.sealui-icon-android-folder:before { content: "\f2e0"; }
+
+.sealui-icon-android-folder-open:before { content: "\f38a"; }
+
+.sealui-icon-android-funnel:before { content: "\f38b"; }
+
+.sealui-icon-android-globe:before { content: "\f38c"; }
+
+.sealui-icon-android-hand:before { content: "\f2e3"; }
+
+.sealui-icon-android-hangout:before { content: "\f38d"; }
+
+.sealui-icon-android-happy:before { content: "\f38e"; }
+
+.sealui-icon-android-home:before { content: "\f38f"; }
+
+.sealui-icon-android-image:before { content: "\f2e4"; }
+
+.sealui-icon-android-laptop:before { content: "\f390"; }
+
+.sealui-icon-android-list:before { content: "\f391"; }
+
+.sealui-icon-android-locate:before { content: "\f2e9"; }
+
+.sealui-icon-android-lock:before { content: "\f392"; }
+
+.sealui-icon-android-mail:before { content: "\f2eb"; }
+
+.sealui-icon-android-map:before { content: "\f393"; }
+
+.sealui-icon-android-menu:before { content: "\f394"; }
+
+.sealui-icon-android-microphone:before { content: "\f2ec"; }
+
+.sealui-icon-android-microphone-off:before { content: "\f395"; }
+
+.sealui-icon-android-more-horizontal:before { content: "\f396"; }
+
+.sealui-icon-android-more-vertical:before { content: "\f397"; }
+
+.sealui-icon-android-navigate:before { content: "\f398"; }
+
+.sealui-icon-android-notifications:before { content: "\f39b"; }
+
+.sealui-icon-android-notifications-none:before { content: "\f399"; }
+
+.sealui-icon-android-notifications-off:before { content: "\f39a"; }
+
+.sealui-icon-android-open:before { content: "\f39c"; }
+
+.sealui-icon-android-options:before { content: "\f39d"; }
+
+.sealui-icon-android-people:before { content: "\f39e"; }
+
+.sealui-icon-android-person:before { content: "\f3a0"; }
+
+.sealui-icon-android-person-add:before { content: "\f39f"; }
+
+.sealui-icon-android-phone-landscape:before { content: "\f3a1"; }
+
+.sealui-icon-android-phone-portrait:before { content: "\f3a2"; }
+
+.sealui-icon-android-pin:before { content: "\f3a3"; }
+
+.sealui-icon-android-plane:before { content: "\f3a4"; }
+
+.sealui-icon-android-playstore:before { content: "\f2f0"; }
+
+.sealui-icon-android-print:before { content: "\f3a5"; }
+
+.sealui-icon-android-radio-button-off:before { content: "\f3a6"; }
+
+.sealui-icon-android-radio-button-on:before { content: "\f3a7"; }
+
+.sealui-icon-android-refresh:before { content: "\f3a8"; }
+
+.sealui-icon-android-remove:before { content: "\f2f4"; }
+
+.sealui-icon-android-remove-circle:before { content: "\f3a9"; }
+
+.sealui-icon-android-restaurant:before { content: "\f3aa"; }
+
+.sealui-icon-android-sad:before { content: "\f3ab"; }
+
+.sealui-icon-android-search:before { content: "\f2f5"; }
+
+.sealui-icon-android-send:before { content: "\f2f6"; }
+
+.sealui-icon-android-settings:before { content: "\f2f7"; }
+
+.sealui-icon-android-share:before { content: "\f2f8"; }
+
+.sealui-icon-android-share-alt:before { content: "\f3ac"; }
+
+.sealui-icon-android-star:before { content: "\f2fc"; }
+
+.sealui-icon-android-star-half:before { content: "\f3ad"; }
+
+.sealui-icon-android-star-outline:before { content: "\f3ae"; }
+
+.sealui-icon-android-stopwatch:before { content: "\f2fd"; }
+
+.sealui-icon-android-subway:before { content: "\f3af"; }
+
+.sealui-icon-android-sunny:before { content: "\f3b0"; }
+
+.sealui-icon-android-sync:before { content: "\f3b1"; }
+
+.sealui-icon-android-textsms:before { content: "\f3b2"; }
+
+.sealui-icon-android-time:before { content: "\f3b3"; }
+
+.sealui-icon-android-train:before { content: "\f3b4"; }
+
+.sealui-icon-android-unlock:before { content: "\f3b5"; }
+
+.sealui-icon-android-upload:before { content: "\f3b6"; }
+
+.sealui-icon-android-volume-down:before { content: "\f3b7"; }
+
+.sealui-icon-android-volume-mute:before { content: "\f3b8"; }
+
+.sealui-icon-android-volume-off:before { content: "\f3b9"; }
+
+.sealui-icon-android-volume-up:before { content: "\f3ba"; }
+
+.sealui-icon-android-walk:before { content: "\f3bb"; }
+
+.sealui-icon-android-warning:before { content: "\f3bc"; }
+
+.sealui-icon-android-watch:before { content: "\f3bd"; }
+
+.sealui-icon-android-wifi:before { content: "\f305"; }
+
+.sealui-icon-aperture:before { content: "\f313"; }
+
+.sealui-icon-archive:before { content: "\f102"; }
+
+.sealui-icon-arrow-down-a:before { content: "\f103"; }
+
+.sealui-icon-arrow-down-b:before { content: "\f104"; }
+
+.sealui-icon-arrow-down-c:before { content: "\f105"; }
+
+.sealui-icon-arrow-expand:before { content: "\f25e"; }
+
+.sealui-icon-arrow-graph-down-left:before { content: "\f25f"; }
+
+.sealui-icon-arrow-graph-down-right:before { content: "\f260"; }
+
+.sealui-icon-arrow-graph-up-left:before { content: "\f261"; }
+
+.sealui-icon-arrow-graph-up-right:before { content: "\f262"; }
+
+.sealui-icon-arrow-left-a:before { content: "\f106"; }
+
+.sealui-icon-arrow-left-b:before { content: "\f107"; }
+
+.sealui-icon-arrow-left-c:before { content: "\f108"; }
+
+.sealui-icon-arrow-move:before { content: "\f263"; }
+
+.sealui-icon-arrow-resize:before { content: "\f264"; }
+
+.sealui-icon-arrow-return-left:before { content: "\f265"; }
+
+.sealui-icon-arrow-return-right:before { content: "\f266"; }
+
+.sealui-icon-arrow-right-a:before { content: "\f109"; }
+
+.sealui-icon-arrow-right-b:before { content: "\f10a"; }
+
+.sealui-icon-arrow-right-c:before { content: "\f10b"; }
+
+.sealui-icon-arrow-shrink:before { content: "\f267"; }
+
+.sealui-icon-arrow-swap:before { content: "\f268"; }
+
+.sealui-icon-arrow-up-a:before { content: "\f10c"; }
+
+.sealui-icon-arrow-up-b:before { content: "\f10d"; }
+
+.sealui-icon-arrow-up-c:before { content: "\f10e"; }
+
+.sealui-icon-asterisk:before { content: "\f314"; }
+
+.sealui-icon-at:before { content: "\f10f"; }
+
+.sealui-icon-backspace:before { content: "\f3bf"; }
+
+.sealui-icon-backspace-outline:before { content: "\f3be"; }
+
+.sealui-icon-bag:before { content: "\f110"; }
+
+.sealui-icon-battery-charging:before { content: "\f111"; }
+
+.sealui-icon-battery-empty:before { content: "\f112"; }
+
+.sealui-icon-battery-full:before { content: "\f113"; }
+
+.sealui-icon-battery-half:before { content: "\f114"; }
+
+.sealui-icon-battery-low:before { content: "\f115"; }
+
+.sealui-icon-beaker:before { content: "\f269"; }
+
+.sealui-icon-beer:before { content: "\f26a"; }
+
+.sealui-icon-bluetooth:before { content: "\f116"; }
+
+.sealui-icon-bonfire:before { content: "\f315"; }
+
+.sealui-icon-bookmark:before { content: "\f26b"; }
+
+.sealui-icon-bowtie:before { content: "\f3c0"; }
+
+.sealui-icon-briefcase:before { content: "\f26c"; }
+
+.sealui-icon-bug:before { content: "\f2be"; }
+
+.sealui-icon-calculator:before { content: "\f26d"; }
+
+.sealui-icon-calendar:before { content: "\f117"; }
+
+.sealui-icon-camera:before { content: "\f118"; }
+
+.sealui-icon-card:before { content: "\f119"; }
+
+.sealui-icon-cash:before { content: "\f316"; }
+
+.sealui-icon-chatbox:before { content: "\f11b"; }
+
+.sealui-icon-chatbox-working:before { content: "\f11a"; }
+
+.sealui-icon-chatboxes:before { content: "\f11c"; }
+
+.sealui-icon-chatbubble:before { content: "\f11e"; }
+
+.sealui-icon-chatbubble-working:before { content: "\f11d"; }
+
+.sealui-icon-chatbubbles:before { content: "\f11f"; }
+
+.sealui-icon-checkmark:before { content: "\f122"; }
+
+.sealui-icon-checkmark-circled:before { content: "\f120"; }
+
+.sealui-icon-checkmark-round:before { content: "\f121"; }
+
+.sealui-icon-chevron-down:before { content: "\f123"; }
+
+.sealui-icon-chevron-left:before { content: "\f124"; }
+
+.sealui-icon-chevron-right:before { content: "\f125"; }
+
+.sealui-icon-chevron-up:before { content: "\f126"; }
+
+.sealui-icon-clipboard:before { content: "\f127"; }
+
+.sealui-icon-clock:before { content: "\f26e"; }
+
+.sealui-icon-close:before { content: "\f12a"; }
+
+.sealui-icon-close-circled:before { content: "\f128"; }
+
+.sealui-icon-close-round:before { content: "\f129"; }
+
+.sealui-icon-closed-captioning:before { content: "\f317"; }
+
+.sealui-icon-cloud:before { content: "\f12b"; }
+
+.sealui-icon-code:before { content: "\f271"; }
+
+.sealui-icon-code-download:before { content: "\f26f"; }
+
+.sealui-icon-code-working:before { content: "\f270"; }
+
+.sealui-icon-coffee:before { content: "\f272"; }
+
+.sealui-icon-compass:before { content: "\f273"; }
+
+.sealui-icon-compose:before { content: "\f12c"; }
+
+.sealui-icon-connection-bars:before { content: "\f274"; }
+
+.sealui-icon-contrast:before { content: "\f275"; }
+
+.sealui-icon-crop:before { content: "\f3c1"; }
+
+.sealui-icon-cube:before { content: "\f318"; }
+
+.sealui-icon-disc:before { content: "\f12d"; }
+
+.sealui-icon-document:before { content: "\f12f"; }
+
+.sealui-icon-document-text:before { content: "\f12e"; }
+
+.sealui-icon-drag:before { content: "\f130"; }
+
+.sealui-icon-earth:before { content: "\f276"; }
+
+.sealui-icon-easel:before { content: "\f3c2"; }
+
+.sealui-icon-edit:before { content: "\f2bf"; }
+
+.sealui-icon-egg:before { content: "\f277"; }
+
+.sealui-icon-eject:before { content: "\f131"; }
+
+.sealui-icon-email:before { content: "\f132"; }
+
+.sealui-icon-email-unread:before { content: "\f3c3"; }
+
+.sealui-icon-erlenmeyer-flask:before { content: "\f3c5"; }
+
+.sealui-icon-erlenmeyer-flask-bubbles:before { content: "\f3c4"; }
+
+.sealui-icon-eye:before { content: "\f133"; }
+
+.sealui-icon-eye-disabled:before { content: "\f306"; }
+
+.sealui-icon-female:before { content: "\f278"; }
+
+.sealui-icon-filing:before { content: "\f134"; }
+
+.sealui-icon-film-marker:before { content: "\f135"; }
+
+.sealui-icon-fireball:before { content: "\f319"; }
+
+.sealui-icon-flag:before { content: "\f279"; }
+
+.sealui-icon-flame:before { content: "\f31a"; }
+
+.sealui-icon-flash:before { content: "\f137"; }
+
+.sealui-icon-flash-off:before { content: "\f136"; }
+
+.sealui-icon-folder:before { content: "\f139"; }
+
+.sealui-icon-fork:before { content: "\f27a"; }
+
+.sealui-icon-fork-repo:before { content: "\f2c0"; }
+
+.sealui-icon-forward:before { content: "\f13a"; }
+
+.sealui-icon-funnel:before { content: "\f31b"; }
+
+.sealui-icon-gear-a:before { content: "\f13d"; }
+
+.sealui-icon-gear-b:before { content: "\f13e"; }
+
+.sealui-icon-grid:before { content: "\f13f"; }
+
+.sealui-icon-hammer:before { content: "\f27b"; }
+
+.sealui-icon-happy:before { content: "\f31c"; }
+
+.sealui-icon-happy-outline:before { content: "\f3c6"; }
+
+.sealui-icon-headphone:before { content: "\f140"; }
+
+.sealui-icon-heart:before { content: "\f141"; }
+
+.sealui-icon-heart-broken:before { content: "\f31d"; }
+
+.sealui-icon-help:before { content: "\f143"; }
+
+.sealui-icon-help-buoy:before { content: "\f27c"; }
+
+.sealui-icon-help-circled:before { content: "\f142"; }
+
+.sealui-icon-home:before { content: "\f144"; }
+
+.sealui-icon-icecream:before { content: "\f27d"; }
+
+.sealui-icon-image:before { content: "\f147"; }
+
+.sealui-icon-images:before { content: "\f148"; }
+
+.sealui-icon-information:before { content: "\f14a"; }
+
+.sealui-icon-information-circled:before { content: "\f149"; }
+
+.sealui-icon-ionic:before { content: "\f14b"; }
+
+.sealui-icon-ios-alarm:before { content: "\f3c8"; }
+
+.sealui-icon-ios-alarm-outline:before { content: "\f3c7"; }
+
+.sealui-icon-ios-albums:before { content: "\f3ca"; }
+
+.sealui-icon-ios-albums-outline:before { content: "\f3c9"; }
+
+.sealui-icon-ios-americanfootball:before { content: "\f3cc"; }
+
+.sealui-icon-ios-americanfootball-outline:before { content: "\f3cb"; }
+
+.sealui-icon-ios-analytics:before { content: "\f3ce"; }
+
+.sealui-icon-ios-analytics-outline:before { content: "\f3cd"; }
+
+.sealui-icon-ios-arrow-back:before { content: "\f3cf"; }
+
+.sealui-icon-ios-arrow-down:before { content: "\f3d0"; }
+
+.sealui-icon-ios-arrow-forward:before { content: "\f3d1"; }
+
+.sealui-icon-ios-arrow-left:before { content: "\f3d2"; }
+
+.sealui-icon-ios-arrow-right:before { content: "\f3d3"; }
+
+.sealui-icon-ios-arrow-thin-down:before { content: "\f3d4"; }
+
+.sealui-icon-ios-arrow-thin-left:before { content: "\f3d5"; }
+
+.sealui-icon-ios-arrow-thin-right:before { content: "\f3d6"; }
+
+.sealui-icon-ios-arrow-thin-up:before { content: "\f3d7"; }
+
+.sealui-icon-ios-arrow-up:before { content: "\f3d8"; }
+
+.sealui-icon-ios-at:before { content: "\f3da"; }
+
+.sealui-icon-ios-at-outline:before { content: "\f3d9"; }
+
+.sealui-icon-ios-barcode:before { content: "\f3dc"; }
+
+.sealui-icon-ios-barcode-outline:before { content: "\f3db"; }
+
+.sealui-icon-ios-baseball:before { content: "\f3de"; }
+
+.sealui-icon-ios-baseball-outline:before { content: "\f3dd"; }
+
+.sealui-icon-ios-basketball:before { content: "\f3e0"; }
+
+.sealui-icon-ios-basketball-outline:before { content: "\f3df"; }
+
+.sealui-icon-ios-bell:before { content: "\f3e2"; }
+
+.sealui-icon-ios-bell-outline:before { content: "\f3e1"; }
+
+.sealui-icon-ios-body:before { content: "\f3e4"; }
+
+.sealui-icon-ios-body-outline:before { content: "\f3e3"; }
+
+.sealui-icon-ios-bolt:before { content: "\f3e6"; }
+
+.sealui-icon-ios-bolt-outline:before { content: "\f3e5"; }
+
+.sealui-icon-ios-book:before { content: "\f3e8"; }
+
+.sealui-icon-ios-book-outline:before { content: "\f3e7"; }
+
+.sealui-icon-ios-bookmarks:before { content: "\f3ea"; }
+
+.sealui-icon-ios-bookmarks-outline:before { content: "\f3e9"; }
+
+.sealui-icon-ios-box:before { content: "\f3ec"; }
+
+.sealui-icon-ios-box-outline:before { content: "\f3eb"; }
+
+.sealui-icon-ios-briefcase:before { content: "\f3ee"; }
+
+.sealui-icon-ios-briefcase-outline:before { content: "\f3ed"; }
+
+.sealui-icon-ios-browsers:before { content: "\f3f0"; }
+
+.sealui-icon-ios-browsers-outline:before { content: "\f3ef"; }
+
+.sealui-icon-ios-calculator:before { content: "\f3f2"; }
+
+.sealui-icon-ios-calculator-outline:before { content: "\f3f1"; }
+
+.sealui-icon-ios-calendar:before { content: "\f3f4"; }
+
+.sealui-icon-ios-calendar-outline:before { content: "\f3f3"; }
+
+.sealui-icon-ios-camera:before { content: "\f3f6"; }
+
+.sealui-icon-ios-camera-outline:before { content: "\f3f5"; }
+
+.sealui-icon-ios-cart:before { content: "\f3f8"; }
+
+.sealui-icon-ios-cart-outline:before { content: "\f3f7"; }
+
+.sealui-icon-ios-chatboxes:before { content: "\f3fa"; }
+
+.sealui-icon-ios-chatboxes-outline:before { content: "\f3f9"; }
+
+.sealui-icon-ios-chatbubble:before { content: "\f3fc"; }
+
+.sealui-icon-ios-chatbubble-outline:before { content: "\f3fb"; }
+
+.sealui-icon-ios-checkmark:before { content: "\f3ff"; }
+
+.sealui-icon-ios-checkmark-empty:before { content: "\f3fd"; }
+
+.sealui-icon-ios-checkmark-outline:before { content: "\f3fe"; }
+
+.sealui-icon-ios-circle-filled:before { content: "\f400"; }
+
+.sealui-icon-ios-circle-outline:before { content: "\f401"; }
+
+.sealui-icon-ios-clock:before { content: "\f403"; }
+
+.sealui-icon-ios-clock-outline:before { content: "\f402"; }
+
+.sealui-icon-ios-close:before { content: "\f406"; }
+
+.sealui-icon-ios-close-empty:before { content: "\f404"; }
+
+.sealui-icon-ios-close-outline:before { content: "\f405"; }
+
+.sealui-icon-ios-cloud:before { content: "\f40c"; }
+
+.sealui-icon-ios-cloud-download:before { content: "\f408"; }
+
+.sealui-icon-ios-cloud-download-outline:before { content: "\f407"; }
+
+.sealui-icon-ios-cloud-outline:before { content: "\f409"; }
+
+.sealui-icon-ios-cloud-upload:before { content: "\f40b"; }
+
+.sealui-icon-ios-cloud-upload-outline:before { content: "\f40a"; }
+
+.sealui-icon-ios-cloudy:before { content: "\f410"; }
+
+.sealui-icon-ios-cloudy-night:before { content: "\f40e"; }
+
+.sealui-icon-ios-cloudy-night-outline:before { content: "\f40d"; }
+
+.sealui-icon-ios-cloudy-outline:before { content: "\f40f"; }
+
+.sealui-icon-ios-cog:before { content: "\f412"; }
+
+.sealui-icon-ios-cog-outline:before { content: "\f411"; }
+
+.sealui-icon-ios-color-filter:before { content: "\f414"; }
+
+.sealui-icon-ios-color-filter-outline:before { content: "\f413"; }
+
+.sealui-icon-ios-color-wand:before { content: "\f416"; }
+
+.sealui-icon-ios-color-wand-outline:before { content: "\f415"; }
+
+.sealui-icon-ios-compose:before { content: "\f418"; }
+
+.sealui-icon-ios-compose-outline:before { content: "\f417"; }
+
+.sealui-icon-ios-contact:before { content: "\f41a"; }
+
+.sealui-icon-ios-contact-outline:before { content: "\f419"; }
+
+.sealui-icon-ios-copy:before { content: "\f41c"; }
+
+.sealui-icon-ios-copy-outline:before { content: "\f41b"; }
+
+.sealui-icon-ios-crop:before { content: "\f41e"; }
+
+.sealui-icon-ios-crop-strong:before { content: "\f41d"; }
+
+.sealui-icon-ios-download:before { content: "\f420"; }
+
+.sealui-icon-ios-download-outline:before { content: "\f41f"; }
+
+.sealui-icon-ios-drag:before { content: "\f421"; }
+
+.sealui-icon-ios-email:before { content: "\f423"; }
+
+.sealui-icon-ios-email-outline:before { content: "\f422"; }
+
+.sealui-icon-ios-eye:before { content: "\f425"; }
+
+.sealui-icon-ios-eye-outline:before { content: "\f424"; }
+
+.sealui-icon-ios-fastforward:before { content: "\f427"; }
+
+.sealui-icon-ios-fastforward-outline:before { content: "\f426"; }
+
+.sealui-icon-ios-filing:before { content: "\f429"; }
+
+.sealui-icon-ios-filing-outline:before { content: "\f428"; }
+
+.sealui-icon-ios-film:before { content: "\f42b"; }
+
+.sealui-icon-ios-film-outline:before { content: "\f42a"; }
+
+.sealui-icon-ios-flag:before { content: "\f42d"; }
+
+.sealui-icon-ios-flag-outline:before { content: "\f42c"; }
+
+.sealui-icon-ios-flame:before { content: "\f42f"; }
+
+.sealui-icon-ios-flame-outline:before { content: "\f42e"; }
+
+.sealui-icon-ios-flask:before { content: "\f431"; }
+
+.sealui-icon-ios-flask-outline:before { content: "\f430"; }
+
+.sealui-icon-ios-flower:before { content: "\f433"; }
+
+.sealui-icon-ios-flower-outline:before { content: "\f432"; }
+
+.sealui-icon-ios-folder:before { content: "\f435"; }
+
+.sealui-icon-ios-folder-outline:before { content: "\f434"; }
+
+.sealui-icon-ios-football:before { content: "\f437"; }
+
+.sealui-icon-ios-football-outline:before { content: "\f436"; }
+
+.sealui-icon-ios-game-controller-a:before { content: "\f439"; }
+
+.sealui-icon-ios-game-controller-a-outline:before { content: "\f438"; }
+
+.sealui-icon-ios-game-controller-b:before { content: "\f43b"; }
+
+.sealui-icon-ios-game-controller-b-outline:before { content: "\f43a"; }
+
+.sealui-icon-ios-gear:before { content: "\f43d"; }
+
+.sealui-icon-ios-gear-outline:before { content: "\f43c"; }
+
+.sealui-icon-ios-glasses:before { content: "\f43f"; }
+
+.sealui-icon-ios-glasses-outline:before { content: "\f43e"; }
+
+.sealui-icon-ios-grid-view:before { content: "\f441"; }
+
+.sealui-icon-ios-grid-view-outline:before { content: "\f440"; }
+
+.sealui-icon-ios-heart:before { content: "\f443"; }
+
+.sealui-icon-ios-heart-outline:before { content: "\f442"; }
+
+.sealui-icon-ios-help:before { content: "\f446"; }
+
+.sealui-icon-ios-help-empty:before { content: "\f444"; }
+
+.sealui-icon-ios-help-outline:before { content: "\f445"; }
+
+.sealui-icon-ios-home:before { content: "\f448"; }
+
+.sealui-icon-ios-home-outline:before { content: "\f447"; }
+
+.sealui-icon-ios-infinite:before { content: "\f44a"; }
+
+.sealui-icon-ios-infinite-outline:before { content: "\f449"; }
+
+.sealui-icon-ios-information:before { content: "\f44d"; }
+
+.sealui-icon-ios-information-empty:before { content: "\f44b"; }
+
+.sealui-icon-ios-information-outline:before { content: "\f44c"; }
+
+.sealui-icon-ios-ionic-outline:before { content: "\f44e"; }
+
+.sealui-icon-ios-keypad:before { content: "\f450"; }
+
+.sealui-icon-ios-keypad-outline:before { content: "\f44f"; }
+
+.sealui-icon-ios-lightbulb:before { content: "\f452"; }
+
+.sealui-icon-ios-lightbulb-outline:before { content: "\f451"; }
+
+.sealui-icon-ios-list:before { content: "\f454"; }
+
+.sealui-icon-ios-list-outline:before { content: "\f453"; }
+
+.sealui-icon-ios-location:before { content: "\f456"; }
+
+.sealui-icon-ios-location-outline:before { content: "\f455"; }
+
+.sealui-icon-ios-locked:before { content: "\f458"; }
+
+.sealui-icon-ios-locked-outline:before { content: "\f457"; }
+
+.sealui-icon-ios-loop:before { content: "\f45a"; }
+
+.sealui-icon-ios-loop-strong:before { content: "\f459"; }
+
+.sealui-icon-ios-medical:before { content: "\f45c"; }
+
+.sealui-icon-ios-medical-outline:before { content: "\f45b"; }
+
+.sealui-icon-ios-medkit:before { content: "\f45e"; }
+
+.sealui-icon-ios-medkit-outline:before { content: "\f45d"; }
+
+.sealui-icon-ios-mic:before { content: "\f461"; }
+
+.sealui-icon-ios-mic-off:before { content: "\f45f"; }
+
+.sealui-icon-ios-mic-outline:before { content: "\f460"; }
+
+.sealui-icon-ios-minus:before { content: "\f464"; }
+
+.sealui-icon-ios-minus-empty:before { content: "\f462"; }
+
+.sealui-icon-ios-minus-outline:before { content: "\f463"; }
+
+.sealui-icon-ios-monitor:before { content: "\f466"; }
+
+.sealui-icon-ios-monitor-outline:before { content: "\f465"; }
+
+.sealui-icon-ios-moon:before { content: "\f468"; }
+
+.sealui-icon-ios-moon-outline:before { content: "\f467"; }
+
+.sealui-icon-ios-more:before { content: "\f46a"; }
+
+.sealui-icon-ios-more-outline:before { content: "\f469"; }
+
+.sealui-icon-ios-musical-note:before { content: "\f46b"; }
+
+.sealui-icon-ios-musical-notes:before { content: "\f46c"; }
+
+.sealui-icon-ios-navigate:before { content: "\f46e"; }
+
+.sealui-icon-ios-navigate-outline:before { content: "\f46d"; }
+
+.sealui-icon-ios-nutrition:before { content: "\f470"; }
+
+.sealui-icon-ios-nutrition-outline:before { content: "\f46f"; }
+
+.sealui-icon-ios-paper:before { content: "\f472"; }
+
+.sealui-icon-ios-paper-outline:before { content: "\f471"; }
+
+.sealui-icon-ios-paperplane:before { content: "\f474"; }
+
+.sealui-icon-ios-paperplane-outline:before { content: "\f473"; }
+
+.sealui-icon-ios-partlysunny:before { content: "\f476"; }
+
+.sealui-icon-ios-partlysunny-outline:before { content: "\f475"; }
+
+.sealui-icon-ios-pause:before { content: "\f478"; }
+
+.sealui-icon-ios-pause-outline:before { content: "\f477"; }
+
+.sealui-icon-ios-paw:before { content: "\f47a"; }
+
+.sealui-icon-ios-paw-outline:before { content: "\f479"; }
+
+.sealui-icon-ios-people:before { content: "\f47c"; }
+
+.sealui-icon-ios-people-outline:before { content: "\f47b"; }
+
+.sealui-icon-ios-person:before { content: "\f47e"; }
+
+.sealui-icon-ios-person-outline:before { content: "\f47d"; }
+
+.sealui-icon-ios-personadd:before { content: "\f480"; }
+
+.sealui-icon-ios-personadd-outline:before { content: "\f47f"; }
+
+.sealui-icon-ios-photos:before { content: "\f482"; }
+
+.sealui-icon-ios-photos-outline:before { content: "\f481"; }
+
+.sealui-icon-ios-pie:before { content: "\f484"; }
+
+.sealui-icon-ios-pie-outline:before { content: "\f483"; }
+
+.sealui-icon-ios-pint:before { content: "\f486"; }
+
+.sealui-icon-ios-pint-outline:before { content: "\f485"; }
+
+.sealui-icon-ios-play:before { content: "\f488"; }
+
+.sealui-icon-ios-play-outline:before { content: "\f487"; }
+
+.sealui-icon-ios-plus:before { content: "\f48b"; }
+
+.sealui-icon-ios-plus-empty:before { content: "\f489"; }
+
+.sealui-icon-ios-plus-outline:before { content: "\f48a"; }
+
+.sealui-icon-ios-pricetag:before { content: "\f48d"; }
+
+.sealui-icon-ios-pricetag-outline:before { content: "\f48c"; }
+
+.sealui-icon-ios-pricetags:before { content: "\f48f"; }
+
+.sealui-icon-ios-pricetags-outline:before { content: "\f48e"; }
+
+.sealui-icon-ios-printer:before { content: "\f491"; }
+
+.sealui-icon-ios-printer-outline:before { content: "\f490"; }
+
+.sealui-icon-ios-pulse:before { content: "\f493"; }
+
+.sealui-icon-ios-pulse-strong:before { content: "\f492"; }
+
+.sealui-icon-ios-rainy:before { content: "\f495"; }
+
+.sealui-icon-ios-rainy-outline:before { content: "\f494"; }
+
+.sealui-icon-ios-recording:before { content: "\f497"; }
+
+.sealui-icon-ios-recording-outline:before { content: "\f496"; }
+
+.sealui-icon-ios-redo:before { content: "\f499"; }
+
+.sealui-icon-ios-redo-outline:before { content: "\f498"; }
+
+.sealui-icon-ios-refresh:before { content: "\f49c"; }
+
+.sealui-icon-ios-refresh-empty:before { content: "\f49a"; }
+
+.sealui-icon-ios-refresh-outline:before { content: "\f49b"; }
+
+.sealui-icon-ios-reload:before { content: "\f49d"; }
+
+.sealui-icon-ios-reverse-camera:before { content: "\f49f"; }
+
+.sealui-icon-ios-reverse-camera-outline:before { content: "\f49e"; }
+
+.sealui-icon-ios-rewind:before { content: "\f4a1"; }
+
+.sealui-icon-ios-rewind-outline:before { content: "\f4a0"; }
+
+.sealui-icon-ios-rose:before { content: "\f4a3"; }
+
+.sealui-icon-ios-rose-outline:before { content: "\f4a2"; }
+
+.sealui-icon-ios-search:before { content: "\f4a5"; }
+
+.sealui-icon-ios-search-strong:before { content: "\f4a4"; }
+
+.sealui-icon-ios-settings:before { content: "\f4a7"; }
+
+.sealui-icon-ios-settings-strong:before { content: "\f4a6"; }
+
+.sealui-icon-ios-shuffle:before { content: "\f4a9"; }
+
+.sealui-icon-ios-shuffle-strong:before { content: "\f4a8"; }
+
+.sealui-icon-ios-skipbackward:before { content: "\f4ab"; }
+
+.sealui-icon-ios-skipbackward-outline:before { content: "\f4aa"; }
+
+.sealui-icon-ios-skipforward:before { content: "\f4ad"; }
+
+.sealui-icon-ios-skipforward-outline:before { content: "\f4ac"; }
+
+.sealui-icon-ios-snowy:before { content: "\f4ae"; }
+
+.sealui-icon-ios-speedometer:before { content: "\f4b0"; }
+
+.sealui-icon-ios-speedometer-outline:before { content: "\f4af"; }
+
+.sealui-icon-ios-star:before { content: "\f4b3"; }
+
+.sealui-icon-ios-star-half:before { content: "\f4b1"; }
+
+.sealui-icon-ios-star-outline:before { content: "\f4b2"; }
+
+.sealui-icon-ios-stopwatch:before { content: "\f4b5"; }
+
+.sealui-icon-ios-stopwatch-outline:before { content: "\f4b4"; }
+
+.sealui-icon-ios-sunny:before { content: "\f4b7"; }
+
+.sealui-icon-ios-sunny-outline:before { content: "\f4b6"; }
+
+.sealui-icon-ios-telephone:before { content: "\f4b9"; }
+
+.sealui-icon-ios-telephone-outline:before { content: "\f4b8"; }
+
+.sealui-icon-ios-tennisball:before { content: "\f4bb"; }
+
+.sealui-icon-ios-tennisball-outline:before { content: "\f4ba"; }
+
+.sealui-icon-ios-thunderstorm:before { content: "\f4bd"; }
+
+.sealui-icon-ios-thunderstorm-outline:before { content: "\f4bc"; }
+
+.sealui-icon-ios-time:before { content: "\f4bf"; }
+
+.sealui-icon-ios-time-outline:before { content: "\f4be"; }
+
+.sealui-icon-ios-timer:before { content: "\f4c1"; }
+
+.sealui-icon-ios-timer-outline:before { content: "\f4c0"; }
+
+.sealui-icon-ios-toggle:before { content: "\f4c3"; }
+
+.sealui-icon-ios-toggle-outline:before { content: "\f4c2"; }
+
+.sealui-icon-ios-trash:before { content: "\f4c5"; }
+
+.sealui-icon-ios-trash-outline:before { content: "\f4c4"; }
+
+.sealui-icon-ios-undo:before { content: "\f4c7"; }
+
+.sealui-icon-ios-undo-outline:before { content: "\f4c6"; }
+
+.sealui-icon-ios-unlocked:before { content: "\f4c9"; }
+
+.sealui-icon-ios-unlocked-outline:before { content: "\f4c8"; }
+
+.sealui-icon-ios-upload:before { content: "\f4cb"; }
+
+.sealui-icon-ios-upload-outline:before { content: "\f4ca"; }
+
+.sealui-icon-ios-videocam:before { content: "\f4cd"; }
+
+.sealui-icon-ios-videocam-outline:before { content: "\f4cc"; }
+
+.sealui-icon-ios-volume-high:before { content: "\f4ce"; }
+
+.sealui-icon-ios-volume-low:before { content: "\f4cf"; }
+
+.sealui-icon-ios-wineglass:before { content: "\f4d1"; }
+
+.sealui-icon-ios-wineglass-outline:before { content: "\f4d0"; }
+
+.sealui-icon-ios-world:before { content: "\f4d3"; }
+
+.sealui-icon-ios-world-outline:before { content: "\f4d2"; }
+
+.sealui-icon-ipad:before { content: "\f1f9"; }
+
+.sealui-icon-iphone:before { content: "\f1fa"; }
+
+.sealui-icon-ipod:before { content: "\f1fb"; }
+
+.sealui-icon-jet:before { content: "\f295"; }
+
+.sealui-icon-key:before { content: "\f296"; }
+
+.sealui-icon-knife:before { content: "\f297"; }
+
+.sealui-icon-laptop:before { content: "\f1fc"; }
+
+.sealui-icon-leaf:before { content: "\f1fd"; }
+
+.sealui-icon-levels:before { content: "\f298"; }
+
+.sealui-icon-lightbulb:before { content: "\f299"; }
+
+.sealui-icon-link:before { content: "\f1fe"; }
+
+.sealui-icon-load-a:before { content: "\f29a"; }
+
+.sealui-icon-load-b:before { content: "\f29b"; }
+
+.sealui-icon-load-c:before { content: "\f29c"; }
+
+.sealui-icon-load-d:before { content: "\f29d"; }
+
+.sealui-icon-location:before { content: "\f1ff"; }
+
+.sealui-icon-lock-combination:before { content: "\f4d4"; }
+
+.sealui-icon-locked:before { content: "\f200"; }
+
+.sealui-icon-log-in:before { content: "\f29e"; }
+
+.sealui-icon-log-out:before { content: "\f29f"; }
+
+.sealui-icon-loop:before { content: "\f201"; }
+
+.sealui-icon-magnet:before { content: "\f2a0"; }
+
+.sealui-icon-male:before { content: "\f2a1"; }
+
+.sealui-icon-man:before { content: "\f202"; }
+
+.sealui-icon-map:before { content: "\f203"; }
+
+.sealui-icon-medkit:before { content: "\f2a2"; }
+
+.sealui-icon-merge:before { content: "\f33f"; }
+
+.sealui-icon-mic-a:before { content: "\f204"; }
+
+.sealui-icon-mic-b:before { content: "\f205"; }
+
+.sealui-icon-mic-c:before { content: "\f206"; }
+
+.sealui-icon-minus:before { content: "\f209"; }
+
+.sealui-icon-minus-circled:before { content: "\f207"; }
+
+.sealui-icon-minus-round:before { content: "\f208"; }
+
+.sealui-icon-model-s:before { content: "\f2c1"; }
+
+.sealui-icon-monitor:before { content: "\f20a"; }
+
+.sealui-icon-more:before { content: "\f20b"; }
+
+.sealui-icon-mouse:before { content: "\f340"; }
+
+.sealui-icon-music-note:before { content: "\f20c"; }
+
+.sealui-icon-navicon:before { content: "\f20e"; }
+
+.sealui-icon-navicon-round:before { content: "\f20d"; }
+
+.sealui-icon-navigate:before { content: "\f2a3"; }
+
+.sealui-icon-network:before { content: "\f341"; }
+
+.sealui-icon-no-smoking:before { content: "\f2c2"; }
+
+.sealui-icon-nuclear:before { content: "\f2a4"; }
+
+.sealui-icon-outlet:before { content: "\f342"; }
+
+.sealui-icon-paintbrush:before { content: "\f4d5"; }
+
+.sealui-icon-paintbucket:before { content: "\f4d6"; }
+
+.sealui-icon-paper-airplane:before { content: "\f2c3"; }
+
+.sealui-icon-paperclip:before { content: "\f20f"; }
+
+.sealui-icon-pause:before { content: "\f210"; }
+
+.sealui-icon-person:before { content: "\f213"; }
+
+.sealui-icon-person-add:before { content: "\f211"; }
+
+.sealui-icon-person-stalker:before { content: "\f212"; }
+
+.sealui-icon-pie-graph:before { content: "\f2a5"; }
+
+.sealui-icon-pin:before { content: "\f2a6"; }
+
+.sealui-icon-pinpoint:before { content: "\f2a7"; }
+
+.sealui-icon-pizza:before { content: "\f2a8"; }
+
+.sealui-icon-plane:before { content: "\f214"; }
+
+.sealui-icon-planet:before { content: "\f343"; }
+
+.sealui-icon-play:before { content: "\f215"; }
+
+.sealui-icon-playstation:before { content: "\f30a"; }
+
+.sealui-icon-plus:before { content: "\f218"; }
+
+.sealui-icon-plus-circled:before { content: "\f216"; }
+
+.sealui-icon-plus-round:before { content: "\f217"; }
+
+.sealui-icon-podium:before { content: "\f344"; }
+
+.sealui-icon-pound:before { content: "\f219"; }
+
+.sealui-icon-power:before { content: "\f2a9"; }
+
+.sealui-icon-pricetag:before { content: "\f2aa"; }
+
+.sealui-icon-pricetags:before { content: "\f2ab"; }
+
+.sealui-icon-printer:before { content: "\f21a"; }
+
+.sealui-icon-pull-request:before { content: "\f345"; }
+
+.sealui-icon-qr-scanner:before { content: "\f346"; }
+
+.sealui-icon-quote:before { content: "\f347"; }
+
+.sealui-icon-radio-waves:before { content: "\f2ac"; }
+
+.sealui-icon-record:before { content: "\f21b"; }
+
+.sealui-icon-refresh:before { content: "\f21c"; }
+
+.sealui-icon-reply:before { content: "\f21e"; }
+
+.sealui-icon-reply-all:before { content: "\f21d"; }
+
+.sealui-icon-ribbon-a:before { content: "\f348"; }
+
+.sealui-icon-ribbon-b:before { content: "\f349"; }
+
+.sealui-icon-sad:before { content: "\f34a"; }
+
+.sealui-icon-sad-outline:before { content: "\f4d7"; }
+
+.sealui-icon-scissors:before { content: "\f34b"; }
+
+.sealui-icon-search:before { content: "\f21f"; }
+
+.sealui-icon-settings:before { content: "\f2ad"; }
+
+.sealui-icon-share:before { content: "\f220"; }
+
+.sealui-icon-shuffle:before { content: "\f221"; }
+
+.sealui-icon-skip-backward:before { content: "\f222"; }
+
+.sealui-icon-skip-forward:before { content: "\f223"; }
+
+.sealui-icon-social-android:before { content: "\f225"; }
+
+.sealui-icon-social-android-outline:before { content: "\f224"; }
+
+.sealui-icon-social-angular:before { content: "\f4d9"; }
+
+.sealui-icon-social-angular-outline:before { content: "\f4d8"; }
+
+.sealui-icon-social-apple:before { content: "\f227"; }
+
+.sealui-icon-social-apple-outline:before { content: "\f226"; }
+
+.sealui-icon-social-bitcoin:before { content: "\f2af"; }
+
+.sealui-icon-social-bitcoin-outline:before { content: "\f2ae"; }
+
+.sealui-icon-social-buffer:before { content: "\f229"; }
+
+.sealui-icon-social-buffer-outline:before { content: "\f228"; }
+
+.sealui-icon-social-chrome:before { content: "\f4db"; }
+
+.sealui-icon-social-chrome-outline:before { content: "\f4da"; }
+
+.sealui-icon-social-codepen:before { content: "\f4dd"; }
+
+.sealui-icon-social-codepen-outline:before { content: "\f4dc"; }
+
+.sealui-icon-social-css3:before { content: "\f4df"; }
+
+.sealui-icon-social-css3-outline:before { content: "\f4de"; }
+
+.sealui-icon-social-designernews:before { content: "\f22b"; }
+
+.sealui-icon-social-designernews-outline:before { content: "\f22a"; }
+
+.sealui-icon-social-dribbble:before { content: "\f22d"; }
+
+.sealui-icon-social-dribbble-outline:before { content: "\f22c"; }
+
+.sealui-icon-social-dropbox:before { content: "\f22f"; }
+
+.sealui-icon-social-dropbox-outline:before { content: "\f22e"; }
+
+.sealui-icon-social-euro:before { content: "\f4e1"; }
+
+.sealui-icon-social-euro-outline:before { content: "\f4e0"; }
+
+.sealui-icon-social-facebook:before { content: "\f231"; }
+
+.sealui-icon-social-facebook-outline:before { content: "\f230"; }
+
+.sealui-icon-social-foursquare:before { content: "\f34d"; }
+
+.sealui-icon-social-foursquare-outline:before { content: "\f34c"; }
+
+.sealui-icon-social-freebsd-devil:before { content: "\f2c4"; }
+
+.sealui-icon-social-github:before { content: "\f233"; }
+
+.sealui-icon-social-github-outline:before { content: "\f232"; }
+
+.sealui-icon-social-google:before { content: "\f34f"; }
+
+.sealui-icon-social-google-outline:before { content: "\f34e"; }
+
+.sealui-icon-social-googleplus:before { content: "\f235"; }
+
+.sealui-icon-social-googleplus-outline:before { content: "\f234"; }
+
+.sealui-icon-social-hackernews:before { content: "\f237"; }
+
+.sealui-icon-social-hackernews-outline:before { content: "\f236"; }
+
+.sealui-icon-social-html5:before { content: "\f4e3"; }
+
+.sealui-icon-social-html5-outline:before { content: "\f4e2"; }
+
+.sealui-icon-social-instagram:before { content: "\f351"; }
+
+.sealui-icon-social-instagram-outline:before { content: "\f350"; }
+
+.sealui-icon-social-javascript:before { content: "\f4e5"; }
+
+.sealui-icon-social-javascript-outline:before { content: "\f4e4"; }
+
+.sealui-icon-social-linkedin:before { content: "\f239"; }
+
+.sealui-icon-social-linkedin-outline:before { content: "\f238"; }
+
+.sealui-icon-social-markdown:before { content: "\f4e6"; }
+
+.sealui-icon-social-nodejs:before { content: "\f4e7"; }
+
+.sealui-icon-social-octocat:before { content: "\f4e8"; }
+
+.sealui-icon-social-pinterest:before { content: "\f2b1"; }
+
+.sealui-icon-social-pinterest-outline:before { content: "\f2b0"; }
+
+.sealui-icon-social-python:before { content: "\f4e9"; }
+
+.sealui-icon-social-reddit:before { content: "\f23b"; }
+
+.sealui-icon-social-reddit-outline:before { content: "\f23a"; }
+
+.sealui-icon-social-rss:before { content: "\f23d"; }
+
+.sealui-icon-social-rss-outline:before { content: "\f23c"; }
+
+.sealui-icon-social-sass:before { content: "\f4ea"; }
+
+.sealui-icon-social-skype:before { content: "\f23f"; }
+
+.sealui-icon-social-skype-outline:before { content: "\f23e"; }
+
+.sealui-icon-social-snapchat:before { content: "\f4ec"; }
+
+.sealui-icon-social-snapchat-outline:before { content: "\f4eb"; }
+
+.sealui-icon-social-tumblr:before { content: "\f241"; }
+
+.sealui-icon-social-tumblr-outline:before { content: "\f240"; }
+
+.sealui-icon-social-tux:before { content: "\f2c5"; }
+
+.sealui-icon-social-twitch:before { content: "\f4ee"; }
+
+.sealui-icon-social-twitch-outline:before { content: "\f4ed"; }
+
+.sealui-icon-social-twitter:before { content: "\f243"; }
+
+.sealui-icon-social-twitter-outline:before { content: "\f242"; }
+
+.sealui-icon-social-usd:before { content: "\f353"; }
+
+.sealui-icon-social-usd-outline:before { content: "\f352"; }
+
+.sealui-icon-social-vimeo:before { content: "\f245"; }
+
+.sealui-icon-social-vimeo-outline:before { content: "\f244"; }
+
+.sealui-icon-social-whatsapp:before { content: "\f4f0"; }
+
+.sealui-icon-social-whatsapp-outline:before { content: "\f4ef"; }
+
+.sealui-icon-social-windows:before { content: "\f247"; }
+
+.sealui-icon-social-windows-outline:before { content: "\f246"; }
+
+.sealui-icon-social-wordpress:before { content: "\f249"; }
+
+.sealui-icon-social-wordpress-outline:before { content: "\f248"; }
+
+.sealui-icon-social-yahoo:before { content: "\f24b"; }
+
+.sealui-icon-social-yahoo-outline:before { content: "\f24a"; }
+
+.sealui-icon-social-yen:before { content: "\f4f2"; }
+
+.sealui-icon-social-yen-outline:before { content: "\f4f1"; }
+
+.sealui-icon-social-youtube:before { content: "\f24d"; }
+
+.sealui-icon-social-youtube-outline:before { content: "\f24c"; }
+
+.sealui-icon-soup-can:before { content: "\f4f4"; }
+
+.sealui-icon-soup-can-outline:before { content: "\f4f3"; }
+
+.sealui-icon-speakerphone:before { content: "\f2b2"; }
+
+.sealui-icon-speedometer:before { content: "\f2b3"; }
+
+.sealui-icon-spoon:before { content: "\f2b4"; }
+
+.sealui-icon-star:before { content: "\f24e"; }
+
+.sealui-icon-stats-bars:before { content: "\f2b5"; }
+
+.sealui-icon-steam:before { content: "\f30b"; }
+
+.sealui-icon-stop:before { content: "\f24f"; }
+
+.sealui-icon-thermometer:before { content: "\f2b6"; }
+
+.sealui-icon-thumbsdown:before { content: "\f250"; }
+
+.sealui-icon-thumbsup:before { content: "\f251"; }
+
+.sealui-icon-toggle:before { content: "\f355"; }
+
+.sealui-icon-toggle-filled:before { content: "\f354"; }
+
+.sealui-icon-transgender:before { content: "\f4f5"; }
+
+.sealui-icon-trash-a:before { content: "\f252"; }
+
+.sealui-icon-trash-b:before { content: "\f253"; }
+
+.sealui-icon-trophy:before { content: "\f356"; }
+
+.sealui-icon-tshirt:before { content: "\f4f7"; }
+
+.sealui-icon-tshirt-outline:before { content: "\f4f6"; }
+
+.sealui-icon-umbrella:before { content: "\f2b7"; }
+
+.sealui-icon-university:before { content: "\f357"; }
+
+.sealui-icon-unlocked:before { content: "\f254"; }
+
+.sealui-icon-upload:before { content: "\f255"; }
+
+.sealui-icon-usb:before { content: "\f2b8"; }
+
+.sealui-icon-videocamera:before { content: "\f256"; }
+
+.sealui-icon-volume-high:before { content: "\f257"; }
+
+.sealui-icon-volume-low:before { content: "\f258"; }
+
+.sealui-icon-volume-medium:before { content: "\f259"; }
+
+.sealui-icon-volume-mute:before { content: "\f25a"; }
+
+.sealui-icon-wand:before { content: "\f358"; }
+
+.sealui-icon-waterdrop:before { content: "\f25b"; }
+
+.sealui-icon-wifi:before { content: "\f25c"; }
+
+.sealui-icon-wineglass:before { content: "\f2b9"; }
+
+.sealui-icon-woman:before { content: "\f25d"; }
+
+.sealui-icon-wrench:before { content: "\f2ba"; }
+
+.sealui-icon-xbox:before { content: "\f30c"; }
+
+
+.sealui-icon-toast-success:before { content: "\f3fd";}
+
+*/

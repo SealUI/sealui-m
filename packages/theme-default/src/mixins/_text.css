@@ -1,0 +1,37 @@
+@define-mixin ellipsis $width{
+    width: $width;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+
+@define-mixin ellipsisLn $line{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+}
+
+@define-mixin ellipsisLnLh $line,$line-height {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $line;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  line-height: $line-height;
+  max-height: calc( calc($line-height * $line ) + .2rem );
+}
+
+@define-mixin  text_wrap{
+    word-wrap:break-word;
+    word-break:break-all;
+}
+
+@define-mixi hyphens {
+    word-wrap:break-word;
+    -webkit-hyphens:auto;
+    hyphens:auto;
+}

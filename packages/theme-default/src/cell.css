@@ -1,0 +1,118 @@
+@charset "UTF-8";
+@import "./common/var.css";
+@import './mixins/setOnepx';
+@import './mixins/text';
+@import './mixins/mobile';
+@component-namespace sealui {
+    @b cells {
+        margin-top: 1.17647059em;
+        background-color: #FFFFFF;
+        line-height: 1.41176471;
+        font-size: var(--cell-font-size);
+        overflow: hidden;
+        position: relative;
+        &:before {
+            @mixin setTopLine var(--cell-border-line-color);
+        }
+        &:after {
+            @mixin setBottomLine var(--cell-border-line-color);
+        }
+        &.sealui-no-group-title{
+            margin-top:0
+        }
+        @e title{
+            margin-top: .77em;
+            margin-bottom: .3em;
+            padding-left: .3rem;
+            padding-right: .3rem;
+            color: var(--cell-title-color);
+            font-size: var(--cell-title-font-size);
+            & + .sealui-cells {
+                margin-top:0
+            }
+        }
+    }
+
+    @b cell {
+        /*
+        padding: var(--cell-padding-vertical) calc(var(--cell-padding-horizontal) / 1.5) var(--cell-padding-vertical) var(--cell-padding-horizontal);
+        */
+        padding:0 calc(var(--cell-padding-horizontal) / 1.5) 0 var(--cell-padding-horizontal);
+        height:.8rem;
+        position: relative;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        /*
+        &:active {
+            background-color:var(--base-background-color-active);
+        }
+        */
+        &:before {
+            @mixin setTopLine var(--cell-border-line-color);
+            left: var(--cell-padding-horizontal);
+        }
+        &:first-child {
+            &:before {
+                display: none;
+            }
+        }
+        &_primary{
+            align-items: flex-start;
+        }
+
+        @e hd{
+            & i,
+            & img{
+                display: block;
+                margin-right:.1rem
+            }
+        }
+        @e bd{
+            flex: 1;
+            @mixin ellipsisLn 1;
+        }
+        @e ft{
+            text-align: right;
+            color:var(--cell-ft-color);
+            font-size: var(--cell-ft-font-size);
+        }
+        @e desc{
+            font-size: var(--cell-desc-font-size);
+            color: #666;
+            padding-top:.01rem;
+            @mixin ellipsisLn 2;
+        }
+
+        @e warn{
+            color:var(--color-danger);
+        }
+        &__link{
+            color:#586C94;
+            font-size: var(--cell-ft-font-size);
+            &:first-child{
+                &:before{
+                    display: block;
+                }
+            }
+        }
+        @e access{
+            /*-webkit-tap-highlight-color:var(--base-tap-highlight-color)*/
+            @mixin tapColor var(--base-background-color-active);
+            & .sealui-cell__ft:after {
+                content: " ";
+                display: inline-block;
+                -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+                height: var(--cell-arrow-size);
+                width: var(--cell-arrow-size);
+                border-width: 2px 2px 0 0;
+                border-color:var(--cell-arrow-color);
+                border-style: solid;
+                position: relative;
+                top: -1px;
+            }
+
+        }
+    }
+}

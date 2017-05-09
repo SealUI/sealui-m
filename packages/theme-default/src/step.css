@@ -1,0 +1,210 @@
+@charset "UTF-8";
+@import "./common/var.css";
+@import './mixins/setOnepx';
+@import './mixins/text';
+
+@component-namespace sealui {
+  @b step {
+    position: relative;
+    vertical-align: top;
+
+    @when horizontal {
+      display: inline-block;
+    }
+
+    @when vertical {
+      & .sealui-step__head,
+      & .sealui-step__main {
+        display: inline-block;
+      }
+
+      & .sealui-step__main {
+        padding-left: .2rem;
+      }
+    }
+
+    @e line {
+      display: inline-block;
+      position: absolute;
+      border-color: inherit;
+      background-color:#ccc;
+
+      @when icon {
+        @when horizontal {
+          right: .08rem;
+        }
+      }
+
+      @when horizontal {
+        top: .26rem;
+
+        left: .54rem;
+        right: 0;
+      }
+
+      @when vertical {
+        width: .04rem;
+        box-sizing: border-box;
+        top: .56rem;
+        bottom: 0;
+        left: .26rem;
+      }
+    }
+
+    @e line-inner {
+      display: block;
+      border-width: .02rem;
+      border-style: solid;
+      border-color: inherit;
+      transition: all 150ms;
+      width: 0;
+      height: 0;
+    }
+
+    @e icon {
+      display: block;
+      line-height: .52rem;
+      & i{
+        font-size:.3rem;
+        vertical-align: .02rem;
+      }
+      > * {
+        line-height: inherit;
+        vertical-align: middle;
+      }
+    }
+
+    @e head {
+      circle: .56rem transparent;
+      text-align: center;
+      line-height: .56rem;
+      font-size: .56rem;
+      vertical-align: top;
+      transition: all 150ms;
+
+      @when text {
+        font-size: .28rem;
+        border-width: .01rem;
+        border-style: solid;
+        line-height: 1;
+        @when process {
+          color: #fff;
+          background-color: #ccc;
+          border-color:#ccc;
+        }
+
+        @when wait {
+          color: #ccc;
+          background-color: #fff;
+          border-color:#ccc;
+        }
+
+        @when success {
+          color: var(--color-white);
+          background-color: var(--color-success);
+          border-color: var(--color-success);
+        }
+
+        @when error {
+          color: var(--color-white);
+          background-color: var(--color-danger);
+          border-color: var(--color-danger);
+        }
+
+        @when finish {
+          color: var(--color-white);
+          background-color: var(--color-primary);
+          border-color: var(--color-primary);
+        }
+      }
+
+      @when process {
+        color: var(--color-extra-light-silver);
+        border-color: var(--color-extra-light-silver);
+      }
+
+      @when wait {
+        color: var(--color-extra-light-silver);
+        border-color: var(--color-extra-light-silver);
+      }
+
+      @when success {
+        color: var(--color-success);
+        border-color: var(--color-success);
+      }
+
+      @when error {
+        color: var(--color-danger);
+        border-color: var(--color-danger);
+      }
+
+      @when finish {
+        color: var(--color-primary);
+        border-color: var(--color-primary);
+      }
+    }
+
+    @e main {
+      white-space: normal;
+      padding-right: 10px;
+      text-align: left;
+    }
+
+    @e title {
+      font-size: .28rem;
+      line-height: .64rem;
+      display: inline-block;
+
+      @when process {
+        font-weight: 700;
+        color:#999;
+      }
+
+      @when wait {
+        font-weight: normal;
+        color: #999;
+      }
+
+      @when success {
+        font-weight: 700;
+        color: var(--color-success);
+      }
+
+      @when error {
+        font-weight: 700;
+        color: var(--color-danger);
+      }
+
+      @when finish {
+        font-weight: 700;
+        color: var(--color-primary);
+      }
+    }
+
+    @e description {
+      font-size: .24rem;
+      font-weight: normal;
+      line-height: .28rem;
+
+      @when process {
+        color: #999;
+      }
+
+      @when wait {
+        color: #999;
+      }
+
+      @when success {
+        color: var(--color-success);
+      }
+
+      @when error {
+        color: var(--color-danger);
+      }
+
+      @when finish {
+        color: var(--color-primary);
+      }
+    }
+  }
+}

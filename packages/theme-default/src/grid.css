@@ -1,0 +1,57 @@
+@charset "UTF-8";
+@import "./common/var.css";
+@import './mixins/setOnepx';
+@import './mixins/text';
+
+@component-namespace sealui {
+    @b grids {
+        position: relative;
+        overflow: hidden;
+        &:before {
+            @mixin setTopLine var(--base-border-line-color);
+        }
+        &:after {
+            @mixin setLeftLine var(--base-border-line-color);
+        }
+    }
+    @b grid{
+        position: relative;
+        float: left;
+        padding: .4rem .2rem;
+        width: calc(100% / 3);
+        box-sizing: border-box;
+
+        &:before {
+            @mixin setRightLine var(--base-border-line-color);
+        }
+        &:after {
+            @mixin setBottomLine var(--base-border-line-color);
+        }
+        &:active {
+            background-color:var(--base-background-color-active);
+        }
+
+        @e icon{
+            width: .56rem;
+            height: .56rem;
+            margin: 0 auto;
+
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+
+            & + .sealui-grid__label{
+                margin-top: .1rem;
+            }
+        }
+        @e label{
+            display: block;
+            text-align: center;
+            color:#000;
+            font-size:.28rem;
+            @mixin ellipsis auto;
+        }
+    }
+}

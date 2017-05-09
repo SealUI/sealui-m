@@ -1,0 +1,24 @@
+@import './mixins/setOnepx';
+
+@define-mixin timeline-color $color {
+    & .sealui-timeline-item__color{
+        background: $color
+    }
+    & .sealui-timeline-item__tail{
+        background: $color
+    }
+    & .sealui-timeline-item__content h4.process,
+    & .sealui-timeline-item__content p.process{
+        color: $color
+    }
+}
+
+@define-mixin timeline-type $color {
+    .sealui-timeline-item__color{
+        background-color: #fff;
+        border:.02rem solid $color;
+    }
+    .sealui-icon::before{
+        color:$color
+    }
+}

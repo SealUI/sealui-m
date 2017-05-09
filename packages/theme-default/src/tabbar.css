@@ -1,0 +1,72 @@
+@charset "UTF-8";
+@import "./common/var.css";
+@import './mixins/setOnepx';
+@import './mixins/text';
+
+@component-namespace sealui {
+    @b tabbar {
+        display: flex;
+        position: absolute;
+        z-index: 500;
+        bottom: 0;
+        width: 100%;
+        background-color: var(--tabbar-backgroound-color);
+
+        &::before {
+            @mixin setTopLine var(--tabbar-top-line-color);
+        }
+
+        @e item{
+            display: block;
+            flex: 1;
+            padding: .1rem 0 0;
+            font-size: 0;
+            color:var(--tabbar-item-font-color);
+            text-align: center;
+            -webkit-tap-highlight-color:var(--base-tap-highlight-color);
+
+             &_on {
+                .sealui-tabbar__icon,
+                .sealui-tabbar__icon > i,
+                .sealui-tabbar__label {
+                    color: var(--tabbar-item-on-font-color);
+                }
+            }
+            &.sealui-tabbar-simple {
+                padding: 0;
+                height:1rem;
+                line-height:1rem;
+                & .sealui-tabbar__label {
+                  font-size: .28rem;
+                  line-height: 1rem;
+                }
+            }
+
+        }
+        @e icon{
+            display: inline-block;
+            width: .6rem;
+            height: .6rem;
+
+            i&,
+            > i {
+                color:var(--tabbar-item-font-color);
+                font-size: .48rem;
+            }
+            i::before{
+                font-size: .6rem;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+        }
+        @e label{
+            text-align: center;
+            color:var(--tabbar-item-font-color);
+            font-size: .2rem;
+            line-height: 1.8;
+        }
+    }
+}

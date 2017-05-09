@@ -1,0 +1,20 @@
+@charset "UTF-8";
+@import "./common/var.css";
+
+@component-namespace sealui {
+    @b steps {
+        font-size: 0;
+
+        > :last-child .sealui-step__line {
+            display: none;
+        }
+
+        @when horizontal {
+            white-space: nowrap;
+
+            @when center {
+                text-align: center;
+            }
+        }
+    }
+}

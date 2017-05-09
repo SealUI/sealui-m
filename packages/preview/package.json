@@ -1,0 +1,15 @@
+{
+    "name": "seal-preview",
+    "version": "0.0.1",
+    "description": "A preview component for Vue.js.",
+    "keywords": [
+        "SealUI",
+        "vue",
+        "component"
+    ],
+    "main": "./lib/index.js",
+    "repository": "https://github.com/SealUI/sealui-m/tree/master/packages/preview",
+    "author": "SealUI",
+    "license": "MIT",
+    "dependencies": {}
+}

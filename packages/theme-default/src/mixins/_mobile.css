@@ -1,0 +1,5 @@
+@define-mixin tapColor $color{
+  &:active {
+    background-color: $color;
+  }
+}

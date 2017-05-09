@@ -1,0 +1,15 @@
+{
+    "name": "seal-grid-item",
+    "version": "0.0.1",
+    "description": "A grid-item component for Vue.js.",
+    "keywords": [
+        "SealUI",
+        "vue",
+        "component"
+    ],
+    "main": "./lib/index.js",
+    "repository": "https://github.com/SealUI/sealui-m/tree/master/packages/grid-item",
+    "author": "SealUI",
+    "license": "MIT",
+    "dependencies": {}
+}

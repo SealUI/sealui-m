@@ -1,0 +1,74 @@
+[
+    {
+        "name": "开发指南",
+        "children": [
+            {
+                "path": "/install",
+                "name": "安装"
+            },
+            {
+                "path": "/quickstart",
+                "name": "快速上手"
+            },
+            {
+                "path": "/overview",
+                "name": "概览"
+            }
+        ]
+    },
+    {
+        "name": "更新日志",
+        "path": "/changelog"
+    },
+    {
+        "name": "基础组件",
+        "groups": [
+            {
+                "groupName": "Basic",
+                "list": [
+                    {
+                        "path": "/layout",
+                        "title": "Layout 布局"
+                    },
+                    {
+                        "path": "/color",
+                        "title": "Color 色彩"
+                    },
+                    {
+                        "path": "/button",
+                        "title": "Button 按钮"
+                    },
+                    {
+                        "path": "/icon",
+                        "title": "Icon 图标"
+                    },
+                    {
+                        "path": "/timeline",
+                        "title": "Timeline 时间轴"
+                    },
+                    {
+                        "path":"/steps",
+                        "title" : "Steps 步骤条"
+                    },
+                    {
+                        "path":"/spinner",
+                        "title" : "Spinner 加载器"
+                    },
+                    {
+                        "path":"/tag",
+                        "title" : "Tag 标签"
+                    }
+                ]
+            },
+            {
+                "groupName": "Notice",
+                "list": [
+                    {
+                    "path": "/messagebox",
+                    "title": "MessageBox 提示"
+                    }
+                ]
+            }
+        ]
+    }
+]

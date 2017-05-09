@@ -1,0 +1,36 @@
+@define-mixin button-variant $color, $background-color, $border-color {
+  color: $color;
+  background-color: $background-color;
+  &:after{
+    border-color:$border-color;
+  }
+  &:active,
+  &.is-active{
+    background: shade($background-color, var(--button-active-shade-percent));
+    color: $color;
+    outline: none;
+    &:after{
+        border-color:shade($border-color, var(--button-active-shade-percent));
+    }
+  }
+
+  &.is-plain {
+    background: var(--button-default-fill);
+    border-color: $border-color;
+    color: $background-color;
+    &:active {
+      background: tint($background-color,10%);
+      color: $color;
+      outline: none;
+      &:after{
+        border-color:tint($border-color,10%)
+     }
+    }
+  }
+}
+
+@define-mixin button-size $padding-vertical, $padding-horizontal, $font-size, $border-radius {
+  padding: $padding-vertical $padding-horizontal;
+  font-size: $font-size;
+  border-radius: $border-radius;
+}

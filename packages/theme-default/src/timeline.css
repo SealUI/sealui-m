@@ -1,0 +1,49 @@
+@charset "UTF-8";
+@import "./common/var.css";
+@import './mixins/setOnepx';
+@import './mixins/timeline';
+
+@component-namespace sealui {
+    @b timeline {
+        @when primary{
+            @mixin timeline-color var(--color-primary);
+        }
+        @when success{
+            @mixin timeline-color var(--color-success);
+        }
+        @when warning{
+            @mixin timeline-color var(--color-warning);
+        }
+        @when danger{
+            @mixin timeline-color var(--color-danger);
+        }
+        @when info{
+            @mixin timeline-color var(--color-info);
+        }
+        @when dark{
+            @mixin timeline-color var(--color-dark);
+        }
+
+        @when border{
+            @mixin timeline-type var(--color-primary);
+            @when primary{
+                @mixin timeline-type var(--color-primary);
+            }
+            @when success{
+                @mixin timeline-type var(--color-success);
+            }
+            @when warning{
+                @mixin timeline-type var(--color-warning);
+            }
+            @when danger{
+                @mixin timeline-type var(--color-danger);
+            }
+            @when info{
+                @mixin timeline-type var(--color-info);
+            }
+            @when dark{
+                @mixin timeline-type var(--color-dark);
+            }
+        }
+    }
+}

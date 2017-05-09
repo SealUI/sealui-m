@@ -1,0 +1,15 @@
+{
+    "name": "seal-loading",
+    "version": "0.0.1",
+    "description": "A loading component for Vue.js.",
+    "keywords": [
+        "SealUI",
+        "vue",
+        "component"
+    ],
+    "main": "./lib/index.js",
+    "repository": "https://github.com/SealUI/sealui-m/tree/master/packages/loading",
+    "author": "SealUI",
+    "license": "MIT",
+    "dependencies": {}
+}

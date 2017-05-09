@@ -1,0 +1,78 @@
+<template>
+    <div>
+        <div class="sealui-mask" v-show="show" @click.stop="close"></div>
+        <div :class="classes()" class="sealui-popup" :style="styles()">
+            <slot></slot>
+        </div>
+    </div>
+</template>
+
+<script type="text/babel">
+    import {addClass, removeClass, getScrollview} from 'sealui-m/src/utils/dom';
+
+    export default {
+        name: 'seal-popup',
+        data() {
+            return {
+                show: this.value
+            }
+        },
+        props: {
+            position: {
+                validator(value) {
+                    return ['bottom', 'center', 'left', 'right'].indexOf(value) > -1;
+                },
+                default: 'bottom'
+            },
+            height: {
+                type: String,
+                default: '50%'
+            },
+            width: {
+                type: String,
+                default: '50%'
+            },
+            value: {
+                type: Boolean
+            }
+        },
+        watch: {
+            value(val) {
+                if (this.isIOS) {
+                    if (val) {
+                        addClass(this.scrollView, 'g-fix-ios-overflow-scrolling-bug');
+                    } else {
+                        removeClass(this.scrollView, 'g-fix-ios-overflow-scrolling-bug');
+                    }
+                }
+
+                this.show = val;
+            }
+        },
+        methods: {
+            styles() {
+                if (this.position == 'left' || this.position == 'right') {
+                    return {width: this.width};
+                } else if (this.position == 'bottom') {
+                    return {width: '100%', height: this.height};
+                } else {
+                    return {width: this.width};
+                }
+            },
+            classes() {
+                return 'sealui-popup__' + this.position + ' '+(this.show ? 'sealui-popup__show ' : '')
+            },
+            close() {
+                this.isIOS && removeClass(this.scrollView, 'g-fix-ios-overflow-scrolling-bug');
+
+                this.show = false;
+                this.$emit('input', false);
+            }
+        },
+        mounted() {
+            this.scrollView = getScrollview(this.$el);
+
+            this.isIOS = !!(window.navigator && window.navigator.userAgent || '').match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+        }
+    }
+</script>

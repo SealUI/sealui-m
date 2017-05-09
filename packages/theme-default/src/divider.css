@@ -1,0 +1,38 @@
+@charset "UTF-8";
+@import "./common/var.css";
+@import './mixins/setOnepx';
+@import './mixins/text';
+
+@component-namespace sealui {
+    @b divider {
+        display: block;
+        white-space: nowrap;
+        height: 100%;
+        overflow: hidden;
+        line-height: 1;
+        text-align: center;
+        padding: .01rem 0;
+        color: var(--divider-font-color);
+        position: relative;
+
+        & span{
+            padding:0 .15rem;
+            background: #f8f8f8;
+            position: relative;
+            z-index:10;
+        }
+        &:before,
+        &:after{
+            @mixin setTopLine var(--base-border-line-color);
+            top:50%;
+        }
+        &:before{
+            left:0;
+            right:50%
+        }
+        &:after{
+            left:auto;
+            right:0
+        }
+    }
+}

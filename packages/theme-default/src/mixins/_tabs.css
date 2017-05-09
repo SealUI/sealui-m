@@ -1,0 +1,8 @@
+@define-mixin tabs-variant $color {
+    & .sealui-tabs__ink-bar{
+        background-color:$color;
+    }
+    & .sealui-tab-item__selected{
+        color:$color;
+    }
+}

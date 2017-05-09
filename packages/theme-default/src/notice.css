@@ -1,0 +1,121 @@
+@charset "UTF-8";
+@import "./common/var.css";
+@import './mixins/setOnepx';
+@import './mixins/text';
+
+@component-namespace sealui {
+    @b notice {
+        position: relative;
+        background-color: var(--notice-default-background-color);
+        height: var(--notice-height);
+        overflow: hidden;
+        font-size: var(--notice-default-font-size);
+        line-height: var(--notice-height);
+        color: var(--notice-default-font-color);
+        display: flex;
+        padding:0 .3rem;
+
+        @e hd{
+
+            & i{
+                font-size: var(--notice-icon-size);
+                line-height: var(--notice-height);
+                margin-right: .2rem;
+            }
+        }
+        @e bd{
+            flex: 1;
+            width: 100%;
+            width: auto;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            line-height: var(--notice-height);
+            padding-right: .04rem
+        }
+        @e ft{
+            & i{
+                width: .6rem;
+                margin-right: -.2rem;
+                text-align: center;
+                font-size: .5rem;
+                line-height: var(--notice-height);
+            }
+        }
+
+        @e icon-notice{
+            &::before{
+                content: "\f257";
+            }
+        }
+        @e icon-info{
+            &::before{
+                content: "\f44d";
+            }
+        }
+        @e icon-location{
+            &::before{
+                content: "\f456";
+            }
+        }
+        @e icon-email{
+            &::before{
+                font-size: .48rem;
+                vertical-align: middle;
+                content: "\f423";
+            }
+        }
+        @e icon-wait{
+            &::before{
+                content: "\f403";
+            }
+        }
+        @e icon-edit{
+            &::before{
+                content: "\f418";
+            }
+        }
+        @e icon-arrow{
+            &::before{
+                content: "\f3d3";
+            }
+        }
+        @e icon-close{
+            &::before{
+                font-size: .7rem;
+                content: "\f404";
+            }
+        }
+
+        @when primary{
+            background-color: tint(var(--color-primary),var(--notice-tint-percent));
+            color:shade(var(--color-primary),var(--notice-shade-percent));
+        }
+
+        @when success{
+            background-color: tint(var(--color-success),var(--notice-tint-percent));
+            color:shade(var(--color-success),var(--notice-shade-percent));
+        }
+
+        @when warning{
+            background-color: tint(var(--color-warning),var(--notice-tint-percent));
+            color:shade(var(--color-warning),var(--notice-shade-percent));
+        }
+
+        @when danger{
+            background-color: tint(var(--color-danger),var(--notice-tint-percent));
+            color:shade(var(--color-danger),var(--notice-shade-percent));
+        }
+
+        @when info{
+            background-color: tint(var(--color-info),var(--notice-tint-percent));
+            color:shade(var(--color-info),var(--notice-shade-percent));
+        }
+
+        @when dark{
+            background-color: tint(var(--color-dark),var(--notice-tint-percent));
+            color:shade(var(--color-dark),var(--notice-shade-percent));
+        }
+
+    }
+}

@@ -1,0 +1,151 @@
+@charset "UTF-8";
+@import "./common/var.css";
+@import './mixins/setOnepx';
+@import './mixins/text';
+
+@component-namespace sealui {
+    @b cityselect {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 75%;
+        background-color: #fff;
+        z-index: calc(var(--base-zindex) * 1000);
+        transform: translate(0, 100%);
+        transition: transform .3s;
+        &.sealui-cityselect-active {
+          transform: translate(0, 0);
+        }
+
+        @e header{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1;
+            &:after {
+                @mixin setBottomLine var(--border-line-color);
+            }
+        }
+        @e title{
+            width: 100%;
+            font-size: .3rem;
+            text-align: center;
+            height: .9rem;
+            line-height: .9rem;
+            position: relative;
+            &:after {
+              @mixin setBottomLine var(--border-line-color);
+            }
+        }
+        @e nav{
+            width: 100%;
+            padding-left: .2rem;
+            overflow: hidden;
+            display: flex;
+            > a {
+              font-size: .26rem;
+              color: #222;
+              display: block;
+              height:.8rem;
+              line-height: .92rem;
+              padding: 0 .2rem;
+              position: relative;
+              margin-right: .15rem;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              max-width: 40%;
+              &.sealui-cityselect-nav-active {
+                color: #F23030;
+                &:after {
+                  content: '';
+                  width: 100%;
+                  height: .02rem;
+                  background-color:var(--color-danger);
+                  position: absolute;
+                  bottom: 0;
+                  left: 0;
+                  z-index: 2;
+                }
+              }
+            }
+        }
+        @e content{
+            height: 100%;
+            padding-top:1.7rem;
+            width: 100%;
+            display: flex;
+            &.sealui-cityselect-move-animate {
+              transition: transform .3s;
+            }
+            &.sealui-cityselect-next {
+              transform: translate(-50%, 0);
+            }
+            &.sealui-cityselect-prev {
+              transform: translate(0, 0);
+            }
+            @m item {
+              display: block;
+              height: inherit;
+              width: 50%; /* for old android */
+              flex: 0 0 50%;
+              overflow-y: auto;
+              -webkit-overflow-scrolling: touch;
+              background-color: #FFF;
+              &::-webkit-scrollbar {
+                width: 0;
+              }
+              &:nth-child(2n) {
+                background-color: #F5F5F5;
+              }
+            }
+            @m item-box{
+                width: 100%;
+                height: inherit;
+                display: block;
+                padding: 0 .4rem;
+                > a {
+                  color: #333;
+                  font-size: .26rem;
+                  height: .8rem;
+                  line-height:.8rem;
+                  overflow: hidden;
+                  display: flex;
+                  align-items: center;
+                  width: 100%;
+                  position: relative;
+                  z-index: 1;
+                  &:before {
+                    @mixin setBottomLine var(--border-line-color);
+                  }
+                  &:active {
+                    background: none;
+                  }
+                  span {
+                    flex: 1;
+                    display: block;
+                  }
+                  &.sealui-cityselect-item-active {
+                    color: var(--color-danger);
+                    &:after {
+                      display: block;
+                      content: "\EA08";
+                      font-family:'seaui-fonts';
+                    }
+                  }
+                }
+            }
+        }
+        @e loading{
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: .26rem;
+            color: #999;
+        }
+    }
+}

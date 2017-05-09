@@ -1,0 +1,16 @@
+{
+  "browsers": ["iOS >= 7", "Android >= 4.1"],
+  "features": {
+    "bem": {
+      "shortcuts": {
+        "component": "b",
+        "modifier": "m",
+        "descendent": "e"
+      },
+      "separators": {
+        "descendent": "__",
+        "modifier": "--"
+      }
+    }
+  }
+}

@@ -1,0 +1,44 @@
+@import './mixins/setOnepx';
+
+@define-mixin tag-variant $color {
+    background-color: $color;
+    color:#fff;
+    &:after{
+        border-color: $color;
+    }
+    & .sealui-tag__dot{
+        background-color: $color
+    }
+    &.is-border{
+        color:$color;
+        &:after{
+            border-color:$color;
+        }
+        & .sealui-tag__text{
+            &:after{
+                @mixin setRightLine $color;
+                top:-0.1rem;
+                bottom:-0.1rem;
+                height:auto;
+                border-width: .02rem;
+            }
+        }
+        & i.sealui-icon{
+            color:$color;
+        }
+    }
+    &:not(.is-border){
+        & .sealui-tag__text{
+            &:after{
+                @mixin setRightLine tint($color,30%);
+                top:-0.1rem;
+                bottom:-0.1rem;
+                height:auto;
+                border-width: .02rem;
+            }
+        }
+        & i.sealui-icon{
+            color:#f8f8f8
+        }
+    }
+}

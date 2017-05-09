@@ -24,7 +24,7 @@
 
 ## 效果演示
 
-[http://sealui-m.sealui.com](http://sealui-m.sealui.com) 地址（请用chrome手机模式预览）
+[http://m.vue.sealui.com](http://m.vue.sealui.com) 地址（请用chrome手机模式预览）
 
 ### 移动端扫描下方二维码
 
@@ -65,7 +65,8 @@ npm run build
 ```
 
 ## 浏览器支持
-现代浏览器和Internet Explorer 9 +
+- iOS
+- Android 4.0+
 
 ## 更新日志
 
@@ -87,13 +88,17 @@ npm run build
 - [x] Divider  分割线
 - [x] Steps    步骤条
 - [x] Timeline 时间轴
-- [ ] Tab
-- [ ] TabBar
+- [x] Tab      Tab切换
+- [x] Radio    单选框
+- [x] Checkbox 复选框
+- [x] TabBar   TabBar导航
+- [x] Video    视频
+- [x] RollNotice    滚动公告
+- [x] Keyboard    安全键盘
+- [x] Switch    开关
 - [ ] Article
-- [ ] Countdown
-- [ ] Countup
-- [ ] Radio
-- [ ] Checkbox
+- [x] Countdown
+- [x] Countup
 - [ ] Swiper
 
 ##### 操作提示
@@ -103,9 +108,10 @@ npm run build
 - [x] ActionSheet 动作面板
 - [x] Msg         提示页
 - [x] Toptips     顶部提示
+- [x] Notice      公告
 
 ##### 表单组件
-- [ ] Input
+- [x] Input       输入框
 - [ ] Number
 - [ ] Switch
 - [ ] Textarea
@@ -113,6 +119,12 @@ npm run build
 #### 插件
 - [x] TitlePlugin 设置微信标题
 - [x] AjaxPlugin Ajax的封装
+
+#### 工具库
+- [x] Base64  base64加密、解密
+- [x] date  格式化日期
+- [x] MD5  md5加密
+- [x] String  String函数 (trim)
 
 #### 指令
 - [x] TitleDirectives 设置微信标题

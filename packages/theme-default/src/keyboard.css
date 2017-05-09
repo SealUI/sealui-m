@@ -1,0 +1,149 @@
+@charset "UTF-8";
+@import "./common/var.css";
+@import './mixins/setOnepx';
+@import './mixins/text';
+
+@component-namespace sealui {
+    @b keyboard {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: calc(var(--base-zindex) * 1000);
+        transform: translate(0, 100%);
+        transition: transform .3s;
+        background-color: #F7F7F7;
+        @e active {
+            transform: translate(0, 0);
+        }
+        @e head{
+            height: .8rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #1F2324;
+            font-size: .3rem;
+            position: relative;
+            &:after {
+                @mixin setBottomLine var(--base-border-line-color);
+            }
+        }
+        @e title{
+            overflow: hidden;
+            padding: .2rem 0 .12rem;
+            color: #222;
+            margin-bottom: 1px; /* for old android */
+            font-size: .36rem;
+            text-align: center;
+            background-color: #FFF;
+            &:before {
+                font-family: "seaui-fonts";
+                content: "\EA04";
+                font-size: .26rem;
+                color: #FF2424;
+                line-height: 1;
+                margin-right: .06rem;
+            }
+        }
+        @e content{
+            background-color: #FFF;
+            margin-top: .3rem;
+            position: relative;
+            &:before {
+                @mixin setTopLine var(--base-border-line-color);
+            }
+        }
+        @e password{
+            margin: 0 .8rem;
+            display: flex;
+            position: relative;
+            background-color: #FFF;
+            &:after {
+                content: '';
+                width: 200%;
+                height: 200%;
+                transform: scale(.5);
+                position: absolute;
+                border: 1px solid var(--base-border-line-color);
+                top: 0;
+                left: 0;
+                transform-origin: 0 0;
+                border-radius: 4px;
+            }
+            li {
+                flex: 1;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 1rem;
+                &:not(:last-child):after {
+                  content: '';
+                  width: 1px;
+                  height: 50%;
+                  position: absolute;
+                  right: 0;
+                  top: 25%;
+                  background-color:var(--base-border-line-color);
+                  transform: scaleX(.5);
+                }
+                i {
+                  width:.1rem;
+                  height:.1rem;
+                  border-radius: 50%;
+                  background-color: #000;
+                }
+            }
+        }
+        @e numbers{
+              font-size: .48rem;
+              background-color: #FFF;
+              > li {
+                width: 100%;
+                display: flex;
+                > a {
+                  width: 1%; /* for old android */
+                  flex: 1;
+                  color: #222;
+                  height: 1rem;
+                  position: relative;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  &:active{
+                    background-color: var(--base-background-color-active);
+                  }
+                  &:not(:last-child):after {
+                        @mixin setRightLine var(--base-border-line-color);
+                  }
+                  &:before {
+                        @mixin setTopLine var(--base-border-line-color);
+                  }
+                }
+                &:last-child {
+                  > a:last-child,
+                  > a:nth-last-child(3) {
+                    background-color: #F7F7F7;
+                    font-size: .3rem;
+                    color: #686868;
+                  }
+                  > a:last-child {
+                    &:after {
+                      font-family: "seaui-fonts";
+                       content: "\EA0F";
+                      font-size: .6rem;
+                    }
+                  }
+                }
+              }
+        }
+        @e error{
+            color: var(--color-danger);
+            overflow: hidden;
+            height: .5rem;
+            line-height: .5rem;
+            font-size: .24rem;
+            text-align: center;
+        }
+    }
+}

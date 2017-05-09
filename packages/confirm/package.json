@@ -1,0 +1,15 @@
+{
+    "name": "seal-confirm",
+    "version": "0.0.1",
+    "description": "A confirm component for Vue.js.",
+    "keywords": [
+        "SealUI",
+        "vue",
+        "component"
+    ],
+    "main": "./lib/index.js",
+    "repository": "https://github.com/SealUI/sealui-m/tree/master/packages/confirm",
+    "author": "SealUI",
+    "license": "MIT",
+    "dependencies": {}
+}

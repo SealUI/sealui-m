@@ -1,0 +1,90 @@
+@charset "UTF-8";
+@import "./common/var.css";
+@import './mixins/setOnepx';
+@import './mixins/text';
+
+@component-namespace sealui {
+    @b msg {
+        padding-top:.36rem;
+        text-align: center;
+        & .sealui-icon:before{
+            font-size: 93px;
+        }
+        & .sealui-icon-success{
+            color:var(--color-success);
+            &:before{
+                content: "\F3FF";
+            }
+        }
+        & .sealui-icon-error{
+            color:var(--color-danger);
+            &:before{
+                content: "\F406";
+            }
+        }
+        & .sealui-icon-wait{
+            color:tint(var(--color-primary),30%);
+            &:before{
+                content: "\F403";
+            }
+        }
+        & .sealui-icon-info{
+            color:var(--color-info);
+            &:before{
+                content: "\F44D";
+            }
+        }
+        & .sealui-icon-warn{
+            color:var(--color-warning);
+            &:before{
+                content: "\F3BC";
+            }
+        }
+        @e icon-area {
+            margin-bottom: .3rem;
+        }
+        @e title{
+            margin-bottom: .05rem;
+            font-weight: 400;
+            font-size: var(--msg-title-font-size);
+        }
+        @e desc{
+            font-size: var(--msg-desc-font-size);
+            color: var(--msg-desc-font-color);
+        }
+        @e text-area {
+            margin-bottom: .25rem;
+            padding: 0 .2rem;
+            & a{
+                color:var(--color-primary);
+            }
+        }
+        @e opr-area {
+            margin-bottom: .25rem;
+        }
+        @e extra-area {
+            margin-bottom: 15px;
+            font-size:var(--msg-extra-font-size);
+            color: var(--msg-extra-font-color);
+        }
+        & .sealui-button-area{
+            margin: 1.17647059em 15px 0.3em;
+            & a{
+                display: block;
+            }
+            & .sealui-button + .sealui-button {
+                margin-top: .15rem;
+            }
+        }
+    }
+}
+
+@media screen and (min-height: 438px) {
+    .sealui-msg__extra-area {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+    }
+}

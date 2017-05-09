@@ -1,0 +1,24 @@
+<div class="<%=className%>">
+    <div class="sealui-mask"></div>
+    <div class="sealui-message-box <% if(isAndroid){ %> sealui-skin_android <% } %>">
+
+        <div class="sealui-message-box__hd">
+            <% if(title){ %>
+            <strong class="sealui-message-box__title"><%=title%></strong>
+            <% } %>
+            <% if(showCloseIcon){ %>
+            <i class="sealui-icon sealui-icon-cancel sealui-message-box__close"></i>
+            <% } %>
+        </div>
+
+        <div class="sealui-message-box__bd"><%=content%></div>
+
+        <% if(!showCloseIcon){ %>
+        <div class="sealui-message-box__ft">
+            <% for(var i = 0; i < buttons.length; i++){ %>
+            <a href="javascript:;" class="sealui-message-box__btn <% if (buttons[i]['type']){%>is-<%=buttons[i]['type']%><% }else{ %>is-default<% } %> <% if(buttons[i]['disabled']){%>is-disabled<%}%>"><%=buttons[i]['label']%></a>
+            <% } %>
+        </div>
+        <% } %>
+    </div>
+</div>

@@ -1,0 +1,202 @@
+[
+  {
+    "groupName": "基础组件",
+    "list": [
+      {
+        "path": "/button",
+        "name": "Button",
+        "cnName": "按钮"
+      },
+      {
+        "path": "/icon",
+        "name": "Icon",
+        "cnName": "图标"
+      },
+      {
+        "path": "/spinner",
+        "name": "Spinner",
+        "cnName": "加载图"
+      },
+      {
+        "path": "/cell",
+        "name": "Cell",
+        "cnName": "列表"
+      },
+      {
+        "path": "/sticky",
+        "name": "Sticky",
+        "cnName": "吸顶"
+      },
+      {
+        "path": "/grid",
+        "name": "Grid",
+        "cnName": "宫格"
+      },
+      {
+        "path": "/panel",
+        "name": "Panel",
+        "cnName": "面板"
+      },
+      {
+        "path": "/flex",
+        "name": "Flex",
+        "cnName": "弹性布局"
+      },
+      {
+        "path": "/divider",
+        "name": "Divider",
+        "cnName": "分割线"
+      },
+      {
+        "path": "/preview",
+        "name": "Preview",
+        "cnName": "表单预览"
+      },
+      {
+        "path": "/tag",
+        "name": "Tag",
+        "cnName": "标签"
+      },
+      {
+        "path": "/steps",
+        "name": "Steps",
+        "cnName": "步骤条"
+      },
+      {
+        "path": "/timeline",
+        "name": "Timeline",
+        "cnName": "时间轴"
+      },
+      {
+        "path": "/tabs",
+        "name": "Tabs",
+        "cnName": "标签页"
+      },
+      {
+        "path": "/video",
+        "name": "Video",
+        "cnName": "视频"
+      },
+      {
+        "path": "/tabbar",
+        "name": "Tabbar",
+        "cnName": "标签栏"
+      },
+      {
+        "path": "/rollnotice",
+        "name": "Rollnotice",
+        "cnName": "滚动公告"
+      },
+      {
+        "path": "/list",
+        "name": "List",
+        "cnName": "列表"
+      }
+    ]
+  },
+  {
+    "groupName": "操作提示",
+    "list": [
+      {
+        "path": "/toast",
+        "name": "Toast",
+        "cnName": "轻提示"
+      },
+      {
+        "path": "/loading",
+        "name": "Loading",
+        "cnName": "加载提示"
+      },
+      {
+        "path": "/dialog",
+        "name": "MessageBox",
+        "cnName": "对话框"
+      },
+      {
+        "path": "/popup",
+        "name": "Popup",
+        "cnName": "弹窗"
+      },
+      {
+        "path": "/actionsheet",
+        "name": "ActionSheet",
+        "cnName": "动作面板"
+      },
+      {
+        "path": "/msg",
+        "name": "Msg",
+        "cnName": "提示页"
+      },
+      {
+        "path": "/toptips",
+        "name": "Toptips",
+        "cnName": "顶部提示"
+      },
+      {
+        "path": "/notice",
+        "name": "Notice",
+        "cnName": "公告"
+      },
+      {
+        "path": "/countup",
+        "name": "Countup",
+        "cnName": "数字动画"
+      },
+      {
+        "path": "/countdown",
+        "name": "Countdown",
+        "cnName": "倒计时"
+      },
+      {
+        "path": "/sendcode",
+        "name": "Sendcode",
+        "cnName": "发送验证码"
+      }
+    ]
+  },
+  {
+    "groupName": "表单组件",
+    "list": [
+      {
+        "path": "/wepay-input",
+        "name": "WepayInput",
+        "cnName": "微信支付输入"
+      },
+      {
+        "path": "/input",
+        "name": "Input",
+        "cnName": "输入框"
+      },
+      {
+        "path": "/checkbox",
+        "name": "Checkbox",
+        "cnName": "复选框"
+      },
+      {
+        "path": "/radio",
+        "name": "Radio",
+        "cnName": "单选框"
+      },
+      {
+        "path": "/switch",
+        "name": "Switch",
+        "cnName": "开关"
+      },
+      {
+        "path": "/keyboard",
+        "name": "Keyboard",
+        "cnName": "键盘"
+      },
+      {
+        "path": "/rate",
+        "name": "Rate",
+        "cnName": "评分"
+      },
+      {
+        "path": "/cityselect",
+        "name": "Cityselect",
+        "cnName": "省市县级联"
+      }
+    ]
+  }
+]

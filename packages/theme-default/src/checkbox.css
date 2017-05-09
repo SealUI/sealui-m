@@ -1,0 +1,92 @@
+@charset "UTF-8";
+@import "./common/var.css";
+@import './mixins/setOnepx';
+@import './mixins/text';
+
+@component-namespace sealui {
+    @b checkbox {
+        @e error{
+            margin-top: .3em;
+            color:var(--color-danger);
+            padding-left: .3rem;
+            padding-right: .3rem;
+            font-size: .28rem;
+        }
+    }
+    @b check{
+        + .sealui-check-icon-checked{
+            &:before{
+                font-size: .5rem;
+                content: '\EA01';
+                color:#C9C9C9
+            }
+        }
+        &:checked{
+            + i.sealui-check-icon-checked{
+                &:before{
+                    content: "\EA06";
+                    color:var(--color-primary);
+                }
+            }
+        }
+
+        @when primary{
+            &:checked{
+                + i.sealui-check-icon-checked{
+                    &:before{
+                        color:var(--color-primary);
+                    }
+                }
+            }
+        }
+        @when success{
+            &:checked{
+                + i.sealui-check-icon-checked{
+                    &:before{
+                        color:var(--color-success);
+                    }
+                }
+            }
+        }
+        @when warning{
+            &:checked{
+                + i.sealui-check-icon-checked{
+                    &:before{
+                        color:var(--color-warning);
+                    }
+                }
+            }
+        }
+        @when danger{
+            &:checked{
+                + i.sealui-check-icon-checked{
+                    &:before{
+                        color:var(--color-danger);
+                    }
+                }
+            }
+        }
+        @when info{
+            &:checked{
+                + i.sealui-check-icon-checked{
+                    &:before{
+                        color:var(--color-info);
+                    }
+                }
+            }
+        }
+        @when dark{
+            &:checked{
+                + i.sealui-check-icon-checked{
+                    &:before{
+                        color:var(--color-dark);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sealui-cells_checkbox > label > * {
+  pointer-events: none;
+}

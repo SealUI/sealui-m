@@ -1,0 +1,33 @@
+@charset "UTF-8";
+@import "./common/var.css";
+@import './media-box.css';
+
+@component-namespace sealui {
+    @b panel {
+        background-color:var(--panel-background-color);
+        margin-top: .2rem;
+        &:first-child {
+            margin-top: 0;
+        }
+
+        position: relative;
+        overflow: hidden;
+        &:before {
+            @mixin setTopLine var(--base-border-line-color);
+        }
+        &:after {
+            @mixin setBottomLine var(--base-border-line-color);
+        }
+
+        @e hd{
+            padding: .28rem .15rem .2rem .3rem;
+            color: var(--panel-hb-title-color);
+            font-size: var(--panel-hb-title-font-size);
+            position: relative;
+            &:after {
+                @mixin setBottomLine var(--base-border-line-color);
+                left: .3rem;
+            }
+        }
+    }
+}
